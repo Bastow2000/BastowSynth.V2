@@ -2,7 +2,8 @@
 An update of BastowSynth.V1
 
 Work in Progress!
-![Uploading Screenshot 2023-07-17 at 01.10.33.png…]()
+<img width="977" alt="Screenshot 2023-07-17 at 01 10 33" src="https://github.com/Bastow2000/BastowSynth.V2/assets/77554338/40ca2392-6031-4fb0-af29-c13aade9d662">
+
 
 This is a template of what I would want at the end of the project.
 <img width="407" alt="Screenshot 2023-07-04 at 19 25 47" src="https://github.com/Bastow2000/BastowSynth.V2/assets/77554338/16b060d5-b023-4650-b7b2-c40d44d65dd8">
