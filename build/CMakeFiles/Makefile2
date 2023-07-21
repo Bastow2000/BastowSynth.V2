@@ -54,10 +54,10 @@ RM = /Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Content
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2
+CMAKE_SOURCE_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2/build
+CMAKE_BINARY_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -155,25 +155,106 @@ External/JUCE/modules/clean:
 # Directory level rules for directory Source
 
 # Recursive "all" directory target.
-Source/all: Source/VolumeComponents/all
-Source/all: Source/MainComponents/all
+Source/all: Source/Components/all
 Source/all: Source/LAF/all
 Source/all: Source/DSP/all
+Source/all: Source/ADSR/all
 .PHONY : Source/all
 
 # Recursive "preinstall" directory target.
-Source/preinstall: Source/VolumeComponents/preinstall
-Source/preinstall: Source/MainComponents/preinstall
+Source/preinstall: Source/Components/preinstall
 Source/preinstall: Source/LAF/preinstall
 Source/preinstall: Source/DSP/preinstall
+Source/preinstall: Source/ADSR/preinstall
 .PHONY : Source/preinstall
 
 # Recursive "clean" directory target.
-Source/clean: Source/VolumeComponents/clean
-Source/clean: Source/MainComponents/clean
+Source/clean: Source/Components/clean
 Source/clean: Source/LAF/clean
 Source/clean: Source/DSP/clean
+Source/clean: Source/ADSR/clean
 .PHONY : Source/clean
+
+#=============================================================================
+# Directory level rules for directory Source/ADSR
+
+# Recursive "all" directory target.
+Source/ADSR/all:
+.PHONY : Source/ADSR/all
+
+# Recursive "preinstall" directory target.
+Source/ADSR/preinstall:
+.PHONY : Source/ADSR/preinstall
+
+# Recursive "clean" directory target.
+Source/ADSR/clean:
+.PHONY : Source/ADSR/clean
+
+#=============================================================================
+# Directory level rules for directory Source/Components
+
+# Recursive "all" directory target.
+Source/Components/all: Source/Components/VolumeComponents/all
+Source/Components/all: Source/Components/MainComponents/all
+Source/Components/all: Source/Components/ADSRComponent/all
+.PHONY : Source/Components/all
+
+# Recursive "preinstall" directory target.
+Source/Components/preinstall: Source/Components/VolumeComponents/preinstall
+Source/Components/preinstall: Source/Components/MainComponents/preinstall
+Source/Components/preinstall: Source/Components/ADSRComponent/preinstall
+.PHONY : Source/Components/preinstall
+
+# Recursive "clean" directory target.
+Source/Components/clean: Source/Components/VolumeComponents/clean
+Source/Components/clean: Source/Components/MainComponents/clean
+Source/Components/clean: Source/Components/ADSRComponent/clean
+.PHONY : Source/Components/clean
+
+#=============================================================================
+# Directory level rules for directory Source/Components/ADSRComponent
+
+# Recursive "all" directory target.
+Source/Components/ADSRComponent/all:
+.PHONY : Source/Components/ADSRComponent/all
+
+# Recursive "preinstall" directory target.
+Source/Components/ADSRComponent/preinstall:
+.PHONY : Source/Components/ADSRComponent/preinstall
+
+# Recursive "clean" directory target.
+Source/Components/ADSRComponent/clean:
+.PHONY : Source/Components/ADSRComponent/clean
+
+#=============================================================================
+# Directory level rules for directory Source/Components/MainComponents
+
+# Recursive "all" directory target.
+Source/Components/MainComponents/all:
+.PHONY : Source/Components/MainComponents/all
+
+# Recursive "preinstall" directory target.
+Source/Components/MainComponents/preinstall:
+.PHONY : Source/Components/MainComponents/preinstall
+
+# Recursive "clean" directory target.
+Source/Components/MainComponents/clean:
+.PHONY : Source/Components/MainComponents/clean
+
+#=============================================================================
+# Directory level rules for directory Source/Components/VolumeComponents
+
+# Recursive "all" directory target.
+Source/Components/VolumeComponents/all:
+.PHONY : Source/Components/VolumeComponents/all
+
+# Recursive "preinstall" directory target.
+Source/Components/VolumeComponents/preinstall:
+.PHONY : Source/Components/VolumeComponents/preinstall
+
+# Recursive "clean" directory target.
+Source/Components/VolumeComponents/clean:
+.PHONY : Source/Components/VolumeComponents/clean
 
 #=============================================================================
 # Directory level rules for directory Source/DSP
@@ -206,50 +287,20 @@ Source/LAF/clean:
 .PHONY : Source/LAF/clean
 
 #=============================================================================
-# Directory level rules for directory Source/MainComponents
-
-# Recursive "all" directory target.
-Source/MainComponents/all:
-.PHONY : Source/MainComponents/all
-
-# Recursive "preinstall" directory target.
-Source/MainComponents/preinstall:
-.PHONY : Source/MainComponents/preinstall
-
-# Recursive "clean" directory target.
-Source/MainComponents/clean:
-.PHONY : Source/MainComponents/clean
-
-#=============================================================================
-# Directory level rules for directory Source/VolumeComponents
-
-# Recursive "all" directory target.
-Source/VolumeComponents/all:
-.PHONY : Source/VolumeComponents/all
-
-# Recursive "preinstall" directory target.
-Source/VolumeComponents/preinstall:
-.PHONY : Source/VolumeComponents/preinstall
-
-# Recursive "clean" directory target.
-Source/VolumeComponents/clean:
-.PHONY : Source/VolumeComponents/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/BastowSynth.dir
 
 # All Build rule for target.
 CMakeFiles/BastowSynth.dir/all: CMakeFiles/BinaryData.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 "Built target BastowSynth"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target BastowSynth"
 .PHONY : CMakeFiles/BastowSynth.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BastowSynth.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 50
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 55
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BastowSynth.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 0
 .PHONY : CMakeFiles/BastowSynth.dir/rule
 
 # Convenience name for target.
@@ -270,14 +321,14 @@ CMakeFiles/BastowSynth_All.dir/all: CMakeFiles/BastowSynth_AU.dir/all
 CMakeFiles/BastowSynth_All.dir/all: CMakeFiles/BastowSynth_VST3.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth_All.dir/build.make CMakeFiles/BastowSynth_All.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth_All.dir/build.make CMakeFiles/BastowSynth_All.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num= "Built target BastowSynth_All"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num= "Built target BastowSynth_All"
 .PHONY : CMakeFiles/BastowSynth_All.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BastowSynth_All.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 89
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 94
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BastowSynth_All.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 0
 .PHONY : CMakeFiles/BastowSynth_All.dir/rule
 
 # Convenience name for target.
@@ -297,14 +348,14 @@ CMakeFiles/BastowSynth_Standalone.dir/all: CMakeFiles/BastowSynth.dir/all
 CMakeFiles/BastowSynth_Standalone.dir/all: CMakeFiles/BinaryData.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth_Standalone.dir/build.make CMakeFiles/BastowSynth_Standalone.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth_Standalone.dir/build.make CMakeFiles/BastowSynth_Standalone.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53,54,55,56,57 "Built target BastowSynth_Standalone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=49,50,51,52,53,54,55,56,57,58,59,60,61 "Built target BastowSynth_Standalone"
 .PHONY : CMakeFiles/BastowSynth_Standalone.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BastowSynth_Standalone.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 68
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BastowSynth_Standalone.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 0
 .PHONY : CMakeFiles/BastowSynth_Standalone.dir/rule
 
 # Convenience name for target.
@@ -324,14 +375,14 @@ CMakeFiles/BastowSynth_AU.dir/all: CMakeFiles/BastowSynth.dir/all
 CMakeFiles/BastowSynth_AU.dir/all: CMakeFiles/BinaryData.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth_AU.dir/build.make CMakeFiles/BastowSynth_AU.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth_AU.dir/build.make CMakeFiles/BastowSynth_AU.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=32,33,34,35,36,37,38,39,40,41,42,43,44 "Built target BastowSynth_AU"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=36,37,38,39,40,41,42,43,44,45,46,47,48 "Built target BastowSynth_AU"
 .PHONY : CMakeFiles/BastowSynth_AU.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BastowSynth_AU.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 68
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BastowSynth_AU.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 0
 .PHONY : CMakeFiles/BastowSynth_AU.dir/rule
 
 # Convenience name for target.
@@ -351,14 +402,14 @@ CMakeFiles/BastowSynth_VST3.dir/all: CMakeFiles/BastowSynth.dir/all
 CMakeFiles/BastowSynth_VST3.dir/all: CMakeFiles/BinaryData.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth_VST3.dir/build.make CMakeFiles/BastowSynth_VST3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth_VST3.dir/build.make CMakeFiles/BastowSynth_VST3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66,67,68,69,70 "Built target BastowSynth_VST3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=62,63,64,65,66,67,68,69,70,71,72,73,74 "Built target BastowSynth_VST3"
 .PHONY : CMakeFiles/BastowSynth_VST3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BastowSynth_VST3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 68
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BastowSynth_VST3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 0
 .PHONY : CMakeFiles/BastowSynth_VST3.dir/rule
 
 # Convenience name for target.
@@ -377,14 +428,14 @@ CMakeFiles/BastowSynth_VST3.dir/clean:
 CMakeFiles/BinaryData.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinaryData.dir/build.make CMakeFiles/BinaryData.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinaryData.dir/build.make CMakeFiles/BinaryData.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89 "Built target BinaryData"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94 "Built target BinaryData"
 .PHONY : CMakeFiles/BinaryData.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BinaryData.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BinaryData.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 0
 .PHONY : CMakeFiles/BinaryData.dir/rule
 
 # Convenience name for target.
@@ -403,7 +454,7 @@ CMakeFiles/BinaryData.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/VerifyGlobs.cmake"
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

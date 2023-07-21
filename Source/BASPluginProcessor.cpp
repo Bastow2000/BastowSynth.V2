@@ -48,7 +48,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout
 {
     std::vector<std::unique_ptr<juce::RangedAudioParameter>> params;
 
-    params.reserve ((3 * 33) + 4); // Reserve space for 33 sets of parameters
+    params.reserve ((3 * 33) + 10); // Reserve space for 33 sets of parameters
 
     constexpr static auto createParamIdWithIndex = [] (auto name, auto index)
     {
@@ -70,8 +70,11 @@ juce::AudioProcessorValueTreeState::ParameterLayout
         const auto freqId = createParamIdWithIndex (baseFreqId, i);
         const auto freqName = createParameterNameWithIndex (baseFreqName, i);
 
+        
+
         const auto wavetypeId = createParamIdWithIndex (baseWaveTypeId, i);
         const auto wavetypeName = createParameterNameWithIndex (baseWaveTypeName, i);
+
 
         auto gainParameter = std::make_unique<juce::AudioParameterFloat> (
             gainId, gainName, juce::NormalisableRange<float> (-64.0f, -12.0f, 1.0), -64.0f);
@@ -101,9 +104,28 @@ juce::AudioProcessorValueTreeState::ParameterLayout
     auto CVB3 =
         std::make_unique<juce::AudioParameterBool> (cvb3ParamId, CVB3Name, false);
 
+    
+    auto Attack = std::make_unique<juce::AudioParameterFloat>(attackId, AttackName, juce::NormalisableRange<float>(0.001f, 0.5f), 0.01f);
+
+    auto Decay = std::make_unique<juce::AudioParameterFloat>(decayId, DecayName, juce::NormalisableRange<float>(0.01f, 0.9f), 0.05f);
+
+    auto Decay2 = std::make_unique<juce::AudioParameterFloat>(decay2Id, Decay2Name, juce::NormalisableRange<float>(0.01f, 1.0f), 0.1f);
+
+    auto Hold = std::make_unique<juce::AudioParameterFloat>(holdId, HoldName, juce::NormalisableRange<float>(0.0f, 0.8f), 0.5f);
+
+    auto Sustain = std::make_unique<juce::AudioParameterFloat>(sustainId, SustainName, juce::NormalisableRange<float>(0.0f, 0.8f), 0.5f);
+
+    auto Release = std::make_unique<juce::AudioParameterFloat>(releaseId, ReleaseName, juce::NormalisableRange<float>(0.01f, 2.0f), 0.5f);
+
     params.push_back (std::move (CVB1));
     params.push_back (std::move (CVB2));
     params.push_back (std::move (CVB3));
+    params.push_back (std::move (Attack));
+    params.push_back (std::move (Decay));
+    params.push_back (std::move (Decay2));
+    params.push_back (std::move (Hold));
+    params.push_back (std::move (Sustain));
+    params.push_back (std::move (Release));
     params.push_back (std::move (MasterGainParameter));
 
     return { params.begin(), params.end() };
@@ -242,6 +264,7 @@ void BASAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
 {
     buffer.clear();
     midiMessages.clear();
+ 
 
     for (int i = 0; i < synthesiser.getNumVoices(); i++)
     {
@@ -251,22 +274,30 @@ void BASAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
             double currentGainMaster = juce::Decibels::decibelsToGain (
                 *tree.getRawParameterValue (gainIdM) + 0.0);
             voice->setMasterGain (static_cast<float> (currentGainMaster));
-            int frequency[33];
-            float currentGain[33];
-            float button[33];
+            
+            float attack = *tree.getRawParameterValue(attackId);
+            float release = *tree.getRawParameterValue(releaseId);
+            float sustain = *tree.getRawParameterValue(sustainId);
+            float decay =  *tree.getRawParameterValue(decayId);
+            float hold = *tree.getRawParameterValue(holdId);
+            float decay2 =  *tree.getRawParameterValue(decay2Id);
+            voice->setCustomADSRParameters(attack, hold, decay, sustain,decay2, release);
+            //voice->setADSRParameters(attack, decay, sustain, release);
+    
+            std::array<float, kNumOscillators> button;
+            std::array<float, kNumOscillators> currentGain;
+            std::array<int, kNumOscillators> frequency;
+
             for (unsigned int n = 0; n < 33; ++n)
             {
-                currentGain[n] = juce::Decibels::decibelsToGain (
-                    *tree.getRawParameterValue (
-                        "gainId" + std::to_string (static_cast<std::size_t> (n)))
-                    + 0.0);
-                voice->setGain (n, currentGain[n]);
-                frequency[n] = static_cast<int> (*tree.getRawParameterValue (
-                    "freqId" + std::to_string (static_cast<std::size_t> (n))));
-                button[n] = static_cast<int> (*tree.getRawParameterValue (
-                    "waveTypeId" + std::to_string (static_cast<std::size_t> (n))));
+                currentGain[n] = juce::Decibels::decibelsToGain (*tree.getRawParameterValue ("gainId" + std::to_string (static_cast<std::size_t> (n)))+ 0.0);
+                
+                frequency[n] = static_cast<int> (*tree.getRawParameterValue ("freqId" + std::to_string (static_cast<std::size_t> (n))));
+                button[n] = static_cast<int> (*tree.getRawParameterValue ("waveTypeId" + std::to_string (static_cast<std::size_t> (n))));
                 voice->buttonPressed = (button[n] == 1);
+                voice->setGain (n, currentGain[n]);
                 voice->setFrequency (n, frequency[n]);
+                
             }
         }
     }

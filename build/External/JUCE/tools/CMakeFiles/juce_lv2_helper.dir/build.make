@@ -53,10 +53,10 @@ RM = /Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Content
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE
+CMAKE_SOURCE_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools
+CMAKE_BINARY_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/juce_lv2_helper.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/juce_lv2_helper.dir/progress.make
 include CMakeFiles/juce_lv2_helper.dir/flags.make
 
 CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o: CMakeFiles/juce_lv2_helper.dir/flags.make
-CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o: /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp
+CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o: /Users/bastow_boii/Desktop/Alex\ Bastow\ Misc/Bastow\ programming/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp
 CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o: CMakeFiles/juce_lv2_helper.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o -MF CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o.d -o CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o -MF CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o.d -o CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp"
 
 CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp > CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp" > CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.i
 
 CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp -o CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp" -o CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.s
 
 # Object files for target juce_lv2_helper
 juce_lv2_helper_OBJECTS = \
@@ -93,7 +93,7 @@ juce_lv2_helper_EXTERNAL_OBJECTS =
 juce_lv2_helper: CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o
 juce_lv2_helper: CMakeFiles/juce_lv2_helper.dir/build.make
 juce_lv2_helper: CMakeFiles/juce_lv2_helper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable juce_lv2_helper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable juce_lv2_helper"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/juce_lv2_helper.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -105,6 +105,6 @@ CMakeFiles/juce_lv2_helper.dir/clean:
 .PHONY : CMakeFiles/juce_lv2_helper.dir/clean
 
 CMakeFiles/juce_lv2_helper.dir/depend:
-	cd /Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE /Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools /Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools /Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/juce_lv2_helper.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/juce_lv2_helper.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/juce_lv2_helper.dir/depend
 

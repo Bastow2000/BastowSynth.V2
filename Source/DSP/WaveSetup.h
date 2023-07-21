@@ -3,6 +3,7 @@
 #include <JuceHeader.h>
 #include <arm_neon.h>
 #include <cmath>
+#include "ADSR.h"
 #include <vector>
 
 class Wavetable
@@ -22,6 +23,9 @@ public:
 
     // Sets the frequency for the <Wavetable*> thats called
     void setFrequency (float f);
+
+       // Implement the function to set the ADSR parameters to your oscillator logic
+    void setCustomADSRParameters(float att, float dec, float sus, float rel, float hold, float dec2);
 
     // Sets new Wavetable
     inline void setNewWavetable (const std::vector<float>& newWavetable);
@@ -57,4 +61,5 @@ private:
     float phaseIncrement_;
 
     float phase_;
+    CustomADSR amplitudeADSR;
 };

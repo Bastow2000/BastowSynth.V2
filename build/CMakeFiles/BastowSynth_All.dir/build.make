@@ -53,10 +53,10 @@ RM = /Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Content
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2
+CMAKE_SOURCE_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2/build
+CMAKE_BINARY_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build"
 
 # Utility rule file for BastowSynth_All.
 
@@ -78,6 +78,6 @@ CMakeFiles/BastowSynth_All.dir/clean:
 .PHONY : CMakeFiles/BastowSynth_All.dir/clean
 
 CMakeFiles/BastowSynth_All.dir/depend:
-	cd /Users/bastow_boii/Desktop/BastowSynth.V2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bastow_boii/Desktop/BastowSynth.V2 /Users/bastow_boii/Desktop/BastowSynth.V2 /Users/bastow_boii/Desktop/BastowSynth.V2/build /Users/bastow_boii/Desktop/BastowSynth.V2/build /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/BastowSynth_All.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/BastowSynth_All.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/BastowSynth_All.dir/depend
 

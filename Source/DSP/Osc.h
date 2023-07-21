@@ -1,6 +1,8 @@
 #pragma once
 #include "WaveGen.h"
 #include "WaveSetup.h"
+#include "ADSR.h"
+#include "Ramp.h"
 #include <JuceHeader.h>
 
 class WavetableSynthesiserSound : public juce::SynthesiserSound
@@ -25,6 +27,7 @@ public:
         // Initialize any necessary member variables
         CreateWaveTable();
         CreateOscillator();
+        amplitudeADSR.setSampleRate((float) getSampleRate());
     }
 
     void promptInitialWavetable()
@@ -91,18 +94,9 @@ public:
 
     void startNote (int midiNoteNumber, float velocity, juce::SynthesiserSound*, int /*currentPitchWheelPosition*/) override
     {
+        amplitudeADSR.trigger();
         float oscillatorFrequency;
         float oscGain;
-
-        if (buttonPressed == true)
-        {
-            changeOscillator();
-            buttonPressed = false; // Reset the flag after changing the oscillator
-        }
-        else
-        {
-            buttonPressed = true;
-        }
 
         for (unsigned int n = 0; n < kNumOscillators_; ++n)
         {
@@ -124,6 +118,7 @@ public:
 
     void stopNote (float /*velocity*/, bool /*allowTailOff*/) override
     {
+        amplitudeADSR.release();
         clearCurrentNote();
     }
 
@@ -131,20 +126,36 @@ public:
 
     void controllerMoved (int /*controllerNumber*/, int /*newValue*/) override {}
 
-    void renderNextBlock (juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override
+    void setCustomADSRParameters(float att,float dec,float sus,float rel,float hold, float dec2)
     {
+        amplitudeADSR.setAttackTime(att);
+        amplitudeADSR.setAttackHoldTime(hold);
+		amplitudeADSR.setDecayTime(dec);
+        amplitudeADSR.setSustainLevel(sus);
+		amplitudeADSR.setDecay2Time(dec2);
+        amplitudeADSR.setReleaseTime(rel);
+        amplitudeADSR.setSegment(dec2,rel, Release);
+    }
+
+    
+    void renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override
+    {
+        std::array<float,kNumOscillators_> envelopeValues;
         for (int sample = 0; sample < numSamples; ++sample)
         {
             float value = 0.0f;
             for (unsigned int i = 0; i < oscillators_.size(); ++i)
             {
-                value += (oscillators_[i]->process()) * gains_[i];
+                envelopeValues[i] = amplitudeADSR.process();
+                value += oscillators_[i]->process() * (gains_[i] * 0.001)  * (envelopeValues[i] * 0.001);
+                value *= masterGain_;
+
+                for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
+                {
+            
+                    outputBuffer.addSample(channel, startSample + sample, value);
+                }
             }
-
-            value *= masterGain_;
-
-            for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
-                outputBuffer.addSample (channel, startSample + sample, value);
         }
     }
 
@@ -159,7 +170,7 @@ private:
         generation_ = std::make_unique<GenerateWavetable> ((float) getSampleRate(), sineTable_, phase_);
         for (unsigned int n = 0; n < kNumOscillators_; ++n)
         {
-            sineTable_ = generation_->prompt_Harmonics ((1));
+            sineTable_ = generation_->prompt_Harmonics ((3));
         }
     }
 
@@ -183,38 +194,39 @@ private:
             oscillators_[n] = std::make_unique<Wavetable> ((float) getSampleRate(), sineTable_, phase_);
         }
     }
+
     void changeOscillator()
     {
-        if (buttonPressed == true)
-        {
+        
             CreateNewWaveTable();
-            buttonPressed = false; // Reset the flag after changing the oscillator
-
+      
             oscillators_.clear();
             oscillators_.resize (kNumOscillators_);
             for (unsigned int n = 0; n < kNumOscillators_; ++n)
             {
                 oscillators_[n] = std::make_unique<Wavetable> ((float) getSampleRate(), sineTable_, phase_);
-            }
         }
-        else
-        {
-            buttonPressed = true; // Set the flag to false if it was previously true
-        }
+       
     }
     static constexpr unsigned int kNumOscillators_ = 33;
     size_t wavetableSize_;
     float level_ = 0.0f;
     float phase_ = 0.0f;
     float masterGain_ = 0.0f;
-    float frequencyIncrement_ = 0.5f;
+    float frequencyIncrement_ = 5.2f;
     int pitchBendUpSemitones_ = 24;
     int pitchBendDownSemitones_ = 12;
+    juce::ADSR adsr;
+    CustomADSR amplitudeADSR;
+    
+    juce::ADSR::Parameters adsrParameters;
+    std::vector<juce::ADSR::Parameters> adsrParams_;
 
     std::vector<float> gains_;
     std::vector<float> sineTable_;
     std::vector<float> frequencyP_;
     std::vector<float> frequencyN_;
+    
 
     std::vector<std::unique_ptr<Wavetable>> oscillators_;
     std::unique_ptr<GenerateWavetable> generation_;

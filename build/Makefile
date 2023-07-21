@@ -57,10 +57,10 @@ RM = /Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Content
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2
+CMAKE_SOURCE_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2/build
+CMAKE_BINARY_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles /Users/bastow_boii/Desktop/BastowSynth.V2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -158,7 +158,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/VerifyGlobs.cmake"
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -930,6 +930,54 @@ External/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/External/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
 .PHONY : External/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
 
+Source/ADSR/ADSR.o: Source/ADSR/ADSR.cpp.o
+.PHONY : Source/ADSR/ADSR.o
+
+# target to build an object file
+Source/ADSR/ADSR.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/ADSR/ADSR.cpp.o
+.PHONY : Source/ADSR/ADSR.cpp.o
+
+Source/ADSR/ADSR.i: Source/ADSR/ADSR.cpp.i
+.PHONY : Source/ADSR/ADSR.i
+
+# target to preprocess a source file
+Source/ADSR/ADSR.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/ADSR/ADSR.cpp.i
+.PHONY : Source/ADSR/ADSR.cpp.i
+
+Source/ADSR/ADSR.s: Source/ADSR/ADSR.cpp.s
+.PHONY : Source/ADSR/ADSR.s
+
+# target to generate assembly for a file
+Source/ADSR/ADSR.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/ADSR/ADSR.cpp.s
+.PHONY : Source/ADSR/ADSR.cpp.s
+
+Source/ADSR/Ramp.o: Source/ADSR/Ramp.cpp.o
+.PHONY : Source/ADSR/Ramp.o
+
+# target to build an object file
+Source/ADSR/Ramp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/ADSR/Ramp.cpp.o
+.PHONY : Source/ADSR/Ramp.cpp.o
+
+Source/ADSR/Ramp.i: Source/ADSR/Ramp.cpp.i
+.PHONY : Source/ADSR/Ramp.i
+
+# target to preprocess a source file
+Source/ADSR/Ramp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/ADSR/Ramp.cpp.i
+.PHONY : Source/ADSR/Ramp.cpp.i
+
+Source/ADSR/Ramp.s: Source/ADSR/Ramp.cpp.s
+.PHONY : Source/ADSR/Ramp.s
+
+# target to generate assembly for a file
+Source/ADSR/Ramp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/ADSR/Ramp.cpp.s
+.PHONY : Source/ADSR/Ramp.cpp.s
+
 Source/BASPluginProcessor.o: Source/BASPluginProcessor.cpp.o
 .PHONY : Source/BASPluginProcessor.o
 
@@ -953,6 +1001,150 @@ Source/BASPluginProcessor.s: Source/BASPluginProcessor.cpp.s
 Source/BASPluginProcessor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/BASPluginProcessor.cpp.s
 .PHONY : Source/BASPluginProcessor.cpp.s
+
+Source/Components/ADSRComponent/ADSR_Component1.o: Source/Components/ADSRComponent/ADSR_Component1.cpp.o
+.PHONY : Source/Components/ADSRComponent/ADSR_Component1.o
+
+# target to build an object file
+Source/Components/ADSRComponent/ADSR_Component1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/ADSRComponent/ADSR_Component1.cpp.o
+.PHONY : Source/Components/ADSRComponent/ADSR_Component1.cpp.o
+
+Source/Components/ADSRComponent/ADSR_Component1.i: Source/Components/ADSRComponent/ADSR_Component1.cpp.i
+.PHONY : Source/Components/ADSRComponent/ADSR_Component1.i
+
+# target to preprocess a source file
+Source/Components/ADSRComponent/ADSR_Component1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/ADSRComponent/ADSR_Component1.cpp.i
+.PHONY : Source/Components/ADSRComponent/ADSR_Component1.cpp.i
+
+Source/Components/ADSRComponent/ADSR_Component1.s: Source/Components/ADSRComponent/ADSR_Component1.cpp.s
+.PHONY : Source/Components/ADSRComponent/ADSR_Component1.s
+
+# target to generate assembly for a file
+Source/Components/ADSRComponent/ADSR_Component1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/ADSRComponent/ADSR_Component1.cpp.s
+.PHONY : Source/Components/ADSRComponent/ADSR_Component1.cpp.s
+
+Source/Components/MainComponents/M_Component1.o: Source/Components/MainComponents/M_Component1.cpp.o
+.PHONY : Source/Components/MainComponents/M_Component1.o
+
+# target to build an object file
+Source/Components/MainComponents/M_Component1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/MainComponents/M_Component1.cpp.o
+.PHONY : Source/Components/MainComponents/M_Component1.cpp.o
+
+Source/Components/MainComponents/M_Component1.i: Source/Components/MainComponents/M_Component1.cpp.i
+.PHONY : Source/Components/MainComponents/M_Component1.i
+
+# target to preprocess a source file
+Source/Components/MainComponents/M_Component1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/MainComponents/M_Component1.cpp.i
+.PHONY : Source/Components/MainComponents/M_Component1.cpp.i
+
+Source/Components/MainComponents/M_Component1.s: Source/Components/MainComponents/M_Component1.cpp.s
+.PHONY : Source/Components/MainComponents/M_Component1.s
+
+# target to generate assembly for a file
+Source/Components/MainComponents/M_Component1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/MainComponents/M_Component1.cpp.s
+.PHONY : Source/Components/MainComponents/M_Component1.cpp.s
+
+Source/Components/VolumeComponents/Component_Placement.o: Source/Components/VolumeComponents/Component_Placement.cpp.o
+.PHONY : Source/Components/VolumeComponents/Component_Placement.o
+
+# target to build an object file
+Source/Components/VolumeComponents/Component_Placement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/Component_Placement.cpp.o
+.PHONY : Source/Components/VolumeComponents/Component_Placement.cpp.o
+
+Source/Components/VolumeComponents/Component_Placement.i: Source/Components/VolumeComponents/Component_Placement.cpp.i
+.PHONY : Source/Components/VolumeComponents/Component_Placement.i
+
+# target to preprocess a source file
+Source/Components/VolumeComponents/Component_Placement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/Component_Placement.cpp.i
+.PHONY : Source/Components/VolumeComponents/Component_Placement.cpp.i
+
+Source/Components/VolumeComponents/Component_Placement.s: Source/Components/VolumeComponents/Component_Placement.cpp.s
+.PHONY : Source/Components/VolumeComponents/Component_Placement.s
+
+# target to generate assembly for a file
+Source/Components/VolumeComponents/Component_Placement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/Component_Placement.cpp.s
+.PHONY : Source/Components/VolumeComponents/Component_Placement.cpp.s
+
+Source/Components/VolumeComponents/V_Component1.o: Source/Components/VolumeComponents/V_Component1.cpp.o
+.PHONY : Source/Components/VolumeComponents/V_Component1.o
+
+# target to build an object file
+Source/Components/VolumeComponents/V_Component1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component1.cpp.o
+.PHONY : Source/Components/VolumeComponents/V_Component1.cpp.o
+
+Source/Components/VolumeComponents/V_Component1.i: Source/Components/VolumeComponents/V_Component1.cpp.i
+.PHONY : Source/Components/VolumeComponents/V_Component1.i
+
+# target to preprocess a source file
+Source/Components/VolumeComponents/V_Component1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component1.cpp.i
+.PHONY : Source/Components/VolumeComponents/V_Component1.cpp.i
+
+Source/Components/VolumeComponents/V_Component1.s: Source/Components/VolumeComponents/V_Component1.cpp.s
+.PHONY : Source/Components/VolumeComponents/V_Component1.s
+
+# target to generate assembly for a file
+Source/Components/VolumeComponents/V_Component1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component1.cpp.s
+.PHONY : Source/Components/VolumeComponents/V_Component1.cpp.s
+
+Source/Components/VolumeComponents/V_Component2.o: Source/Components/VolumeComponents/V_Component2.cpp.o
+.PHONY : Source/Components/VolumeComponents/V_Component2.o
+
+# target to build an object file
+Source/Components/VolumeComponents/V_Component2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component2.cpp.o
+.PHONY : Source/Components/VolumeComponents/V_Component2.cpp.o
+
+Source/Components/VolumeComponents/V_Component2.i: Source/Components/VolumeComponents/V_Component2.cpp.i
+.PHONY : Source/Components/VolumeComponents/V_Component2.i
+
+# target to preprocess a source file
+Source/Components/VolumeComponents/V_Component2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component2.cpp.i
+.PHONY : Source/Components/VolumeComponents/V_Component2.cpp.i
+
+Source/Components/VolumeComponents/V_Component2.s: Source/Components/VolumeComponents/V_Component2.cpp.s
+.PHONY : Source/Components/VolumeComponents/V_Component2.s
+
+# target to generate assembly for a file
+Source/Components/VolumeComponents/V_Component2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component2.cpp.s
+.PHONY : Source/Components/VolumeComponents/V_Component2.cpp.s
+
+Source/Components/VolumeComponents/V_Component3.o: Source/Components/VolumeComponents/V_Component3.cpp.o
+.PHONY : Source/Components/VolumeComponents/V_Component3.o
+
+# target to build an object file
+Source/Components/VolumeComponents/V_Component3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component3.cpp.o
+.PHONY : Source/Components/VolumeComponents/V_Component3.cpp.o
+
+Source/Components/VolumeComponents/V_Component3.i: Source/Components/VolumeComponents/V_Component3.cpp.i
+.PHONY : Source/Components/VolumeComponents/V_Component3.i
+
+# target to preprocess a source file
+Source/Components/VolumeComponents/V_Component3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component3.cpp.i
+.PHONY : Source/Components/VolumeComponents/V_Component3.cpp.i
+
+Source/Components/VolumeComponents/V_Component3.s: Source/Components/VolumeComponents/V_Component3.cpp.s
+.PHONY : Source/Components/VolumeComponents/V_Component3.s
+
+# target to generate assembly for a file
+Source/Components/VolumeComponents/V_Component3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/Components/VolumeComponents/V_Component3.cpp.s
+.PHONY : Source/Components/VolumeComponents/V_Component3.cpp.s
 
 Source/DSP/Osc.o: Source/DSP/Osc.cpp.o
 .PHONY : Source/DSP/Osc.o
@@ -1025,6 +1217,30 @@ Source/DSP/WaveSetup.s: Source/DSP/WaveSetup.cpp.s
 Source/DSP/WaveSetup.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/DSP/WaveSetup.cpp.s
 .PHONY : Source/DSP/WaveSetup.cpp.s
+
+Source/LAF/ADSRsLAF.o: Source/LAF/ADSRsLAF.cpp.o
+.PHONY : Source/LAF/ADSRsLAF.o
+
+# target to build an object file
+Source/LAF/ADSRsLAF.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/LAF/ADSRsLAF.cpp.o
+.PHONY : Source/LAF/ADSRsLAF.cpp.o
+
+Source/LAF/ADSRsLAF.i: Source/LAF/ADSRsLAF.cpp.i
+.PHONY : Source/LAF/ADSRsLAF.i
+
+# target to preprocess a source file
+Source/LAF/ADSRsLAF.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/LAF/ADSRsLAF.cpp.i
+.PHONY : Source/LAF/ADSRsLAF.cpp.i
+
+Source/LAF/ADSRsLAF.s: Source/LAF/ADSRsLAF.cpp.s
+.PHONY : Source/LAF/ADSRsLAF.s
+
+# target to generate assembly for a file
+Source/LAF/ADSRsLAF.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/LAF/ADSRsLAF.cpp.s
+.PHONY : Source/LAF/ADSRsLAF.cpp.s
 
 Source/LAF/CustomButton.o: Source/LAF/CustomButton.cpp.o
 .PHONY : Source/LAF/CustomButton.o
@@ -1122,30 +1338,6 @@ Source/LAF/GainSLAF.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/LAF/GainSLAF.cpp.s
 .PHONY : Source/LAF/GainSLAF.cpp.s
 
-Source/MainComponents/M_Component1.o: Source/MainComponents/M_Component1.cpp.o
-.PHONY : Source/MainComponents/M_Component1.o
-
-# target to build an object file
-Source/MainComponents/M_Component1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/MainComponents/M_Component1.cpp.o
-.PHONY : Source/MainComponents/M_Component1.cpp.o
-
-Source/MainComponents/M_Component1.i: Source/MainComponents/M_Component1.cpp.i
-.PHONY : Source/MainComponents/M_Component1.i
-
-# target to preprocess a source file
-Source/MainComponents/M_Component1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/MainComponents/M_Component1.cpp.i
-.PHONY : Source/MainComponents/M_Component1.cpp.i
-
-Source/MainComponents/M_Component1.s: Source/MainComponents/M_Component1.cpp.s
-.PHONY : Source/MainComponents/M_Component1.s
-
-# target to generate assembly for a file
-Source/MainComponents/M_Component1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/MainComponents/M_Component1.cpp.s
-.PHONY : Source/MainComponents/M_Component1.cpp.s
-
 Source/PluginEditor.o: Source/PluginEditor.cpp.o
 .PHONY : Source/PluginEditor.o
 
@@ -1169,102 +1361,6 @@ Source/PluginEditor.s: Source/PluginEditor.cpp.s
 Source/PluginEditor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/PluginEditor.cpp.s
 .PHONY : Source/PluginEditor.cpp.s
-
-Source/VolumeComponents/Component_Placement.o: Source/VolumeComponents/Component_Placement.cpp.o
-.PHONY : Source/VolumeComponents/Component_Placement.o
-
-# target to build an object file
-Source/VolumeComponents/Component_Placement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/Component_Placement.cpp.o
-.PHONY : Source/VolumeComponents/Component_Placement.cpp.o
-
-Source/VolumeComponents/Component_Placement.i: Source/VolumeComponents/Component_Placement.cpp.i
-.PHONY : Source/VolumeComponents/Component_Placement.i
-
-# target to preprocess a source file
-Source/VolumeComponents/Component_Placement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/Component_Placement.cpp.i
-.PHONY : Source/VolumeComponents/Component_Placement.cpp.i
-
-Source/VolumeComponents/Component_Placement.s: Source/VolumeComponents/Component_Placement.cpp.s
-.PHONY : Source/VolumeComponents/Component_Placement.s
-
-# target to generate assembly for a file
-Source/VolumeComponents/Component_Placement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/Component_Placement.cpp.s
-.PHONY : Source/VolumeComponents/Component_Placement.cpp.s
-
-Source/VolumeComponents/V_Component1.o: Source/VolumeComponents/V_Component1.cpp.o
-.PHONY : Source/VolumeComponents/V_Component1.o
-
-# target to build an object file
-Source/VolumeComponents/V_Component1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component1.cpp.o
-.PHONY : Source/VolumeComponents/V_Component1.cpp.o
-
-Source/VolumeComponents/V_Component1.i: Source/VolumeComponents/V_Component1.cpp.i
-.PHONY : Source/VolumeComponents/V_Component1.i
-
-# target to preprocess a source file
-Source/VolumeComponents/V_Component1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component1.cpp.i
-.PHONY : Source/VolumeComponents/V_Component1.cpp.i
-
-Source/VolumeComponents/V_Component1.s: Source/VolumeComponents/V_Component1.cpp.s
-.PHONY : Source/VolumeComponents/V_Component1.s
-
-# target to generate assembly for a file
-Source/VolumeComponents/V_Component1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component1.cpp.s
-.PHONY : Source/VolumeComponents/V_Component1.cpp.s
-
-Source/VolumeComponents/V_Component2.o: Source/VolumeComponents/V_Component2.cpp.o
-.PHONY : Source/VolumeComponents/V_Component2.o
-
-# target to build an object file
-Source/VolumeComponents/V_Component2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component2.cpp.o
-.PHONY : Source/VolumeComponents/V_Component2.cpp.o
-
-Source/VolumeComponents/V_Component2.i: Source/VolumeComponents/V_Component2.cpp.i
-.PHONY : Source/VolumeComponents/V_Component2.i
-
-# target to preprocess a source file
-Source/VolumeComponents/V_Component2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component2.cpp.i
-.PHONY : Source/VolumeComponents/V_Component2.cpp.i
-
-Source/VolumeComponents/V_Component2.s: Source/VolumeComponents/V_Component2.cpp.s
-.PHONY : Source/VolumeComponents/V_Component2.s
-
-# target to generate assembly for a file
-Source/VolumeComponents/V_Component2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component2.cpp.s
-.PHONY : Source/VolumeComponents/V_Component2.cpp.s
-
-Source/VolumeComponents/V_Component3.o: Source/VolumeComponents/V_Component3.cpp.o
-.PHONY : Source/VolumeComponents/V_Component3.o
-
-# target to build an object file
-Source/VolumeComponents/V_Component3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component3.cpp.o
-.PHONY : Source/VolumeComponents/V_Component3.cpp.o
-
-Source/VolumeComponents/V_Component3.i: Source/VolumeComponents/V_Component3.cpp.i
-.PHONY : Source/VolumeComponents/V_Component3.i
-
-# target to preprocess a source file
-Source/VolumeComponents/V_Component3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component3.cpp.i
-.PHONY : Source/VolumeComponents/V_Component3.cpp.i
-
-Source/VolumeComponents/V_Component3.s: Source/VolumeComponents/V_Component3.cpp.s
-.PHONY : Source/VolumeComponents/V_Component3.s
-
-# target to generate assembly for a file
-Source/VolumeComponents/V_Component3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BastowSynth.dir/build.make CMakeFiles/BastowSynth.dir/Source/VolumeComponents/V_Component3.cpp.s
-.PHONY : Source/VolumeComponents/V_Component3.cpp.s
 
 juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o
 .PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.o
@@ -1481,6 +1577,30 @@ juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.s: juce_binarydata_Binar
 juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinaryData.dir/build.make CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.s
 .PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.s
+
+juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o
+.PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.o
+
+# target to build an object file
+juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinaryData.dir/build.make CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o
+.PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o
+
+juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.i: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.i
+.PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.i
+
+# target to preprocess a source file
+juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinaryData.dir/build.make CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.i
+.PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.i
+
+juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.s: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.s
+.PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.s
+
+# target to generate assembly for a file
+juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinaryData.dir/build.make CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.s
+.PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.s
 
 juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o
 .PHONY : juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.o
@@ -1770,9 +1890,33 @@ help:
 	@echo "... External/JUCE/modules/juce_gui_extra/juce_gui_extra.o"
 	@echo "... External/JUCE/modules/juce_gui_extra/juce_gui_extra.i"
 	@echo "... External/JUCE/modules/juce_gui_extra/juce_gui_extra.s"
+	@echo "... Source/ADSR/ADSR.o"
+	@echo "... Source/ADSR/ADSR.i"
+	@echo "... Source/ADSR/ADSR.s"
+	@echo "... Source/ADSR/Ramp.o"
+	@echo "... Source/ADSR/Ramp.i"
+	@echo "... Source/ADSR/Ramp.s"
 	@echo "... Source/BASPluginProcessor.o"
 	@echo "... Source/BASPluginProcessor.i"
 	@echo "... Source/BASPluginProcessor.s"
+	@echo "... Source/Components/ADSRComponent/ADSR_Component1.o"
+	@echo "... Source/Components/ADSRComponent/ADSR_Component1.i"
+	@echo "... Source/Components/ADSRComponent/ADSR_Component1.s"
+	@echo "... Source/Components/MainComponents/M_Component1.o"
+	@echo "... Source/Components/MainComponents/M_Component1.i"
+	@echo "... Source/Components/MainComponents/M_Component1.s"
+	@echo "... Source/Components/VolumeComponents/Component_Placement.o"
+	@echo "... Source/Components/VolumeComponents/Component_Placement.i"
+	@echo "... Source/Components/VolumeComponents/Component_Placement.s"
+	@echo "... Source/Components/VolumeComponents/V_Component1.o"
+	@echo "... Source/Components/VolumeComponents/V_Component1.i"
+	@echo "... Source/Components/VolumeComponents/V_Component1.s"
+	@echo "... Source/Components/VolumeComponents/V_Component2.o"
+	@echo "... Source/Components/VolumeComponents/V_Component2.i"
+	@echo "... Source/Components/VolumeComponents/V_Component2.s"
+	@echo "... Source/Components/VolumeComponents/V_Component3.o"
+	@echo "... Source/Components/VolumeComponents/V_Component3.i"
+	@echo "... Source/Components/VolumeComponents/V_Component3.s"
 	@echo "... Source/DSP/Osc.o"
 	@echo "... Source/DSP/Osc.i"
 	@echo "... Source/DSP/Osc.s"
@@ -1782,6 +1926,9 @@ help:
 	@echo "... Source/DSP/WaveSetup.o"
 	@echo "... Source/DSP/WaveSetup.i"
 	@echo "... Source/DSP/WaveSetup.s"
+	@echo "... Source/LAF/ADSRsLAF.o"
+	@echo "... Source/LAF/ADSRsLAF.i"
+	@echo "... Source/LAF/ADSRsLAF.s"
 	@echo "... Source/LAF/CustomButton.o"
 	@echo "... Source/LAF/CustomButton.i"
 	@echo "... Source/LAF/CustomButton.s"
@@ -1794,24 +1941,9 @@ help:
 	@echo "... Source/LAF/GainSLAF.o"
 	@echo "... Source/LAF/GainSLAF.i"
 	@echo "... Source/LAF/GainSLAF.s"
-	@echo "... Source/MainComponents/M_Component1.o"
-	@echo "... Source/MainComponents/M_Component1.i"
-	@echo "... Source/MainComponents/M_Component1.s"
 	@echo "... Source/PluginEditor.o"
 	@echo "... Source/PluginEditor.i"
 	@echo "... Source/PluginEditor.s"
-	@echo "... Source/VolumeComponents/Component_Placement.o"
-	@echo "... Source/VolumeComponents/Component_Placement.i"
-	@echo "... Source/VolumeComponents/Component_Placement.s"
-	@echo "... Source/VolumeComponents/V_Component1.o"
-	@echo "... Source/VolumeComponents/V_Component1.i"
-	@echo "... Source/VolumeComponents/V_Component1.s"
-	@echo "... Source/VolumeComponents/V_Component2.o"
-	@echo "... Source/VolumeComponents/V_Component2.i"
-	@echo "... Source/VolumeComponents/V_Component2.s"
-	@echo "... Source/VolumeComponents/V_Component3.o"
-	@echo "... Source/VolumeComponents/V_Component3.i"
-	@echo "... Source/VolumeComponents/V_Component3.s"
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.o"
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.i"
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.s"
@@ -1839,6 +1971,9 @@ help:
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.o"
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.i"
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.s"
+	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.o"
+	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.i"
+	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.s"
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.o"
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.i"
 	@echo "... juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.s"
@@ -1874,7 +2009,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/VerifyGlobs.cmake"
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

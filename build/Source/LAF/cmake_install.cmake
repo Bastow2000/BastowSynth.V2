@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bastow_boii/Desktop/BastowSynth.V2/Source/LAF
+# Install script for directory: /Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/Source/LAF
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

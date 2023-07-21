@@ -18,6 +18,8 @@ BASAudioProcessorEditor::BASAudioProcessorEditor (BASAudioProcessor& p)
       vComponent2 (audioProcessor),
       vComponent3 (audioProcessor),
       mvComponent1 (audioProcessor),
+      ADSRComponent (audioProcessor),
+      adsrCompartments (),
       keyboardComponent (p.keyboardState, juce::MidiKeyboardComponent::horizontalKeyboard)
 
       // Initalising Component Volume Buttons
@@ -35,7 +37,7 @@ BASAudioProcessorEditor::BASAudioProcessorEditor (BASAudioProcessor& p)
     //==============================================================================
 
     keyboardComponent.setAvailableRange (36, 120);
-    keyboardComponent.setKeyWidth (11.9f);
+    keyboardComponent.setKeyWidth (11.0f);
     keyboardComponent.setBlackNoteWidthProportion (.5);
     keyboardComponent.setColour (keyboardComponent.blackNoteColourId, C4::lightGrey.darker (100.5));
     keyboardComponent.setColour (keyboardComponent.whiteNoteColourId, C4::lightBlack.darker (0.05f));
@@ -56,12 +58,23 @@ BASAudioProcessorEditor::BASAudioProcessorEditor (BASAudioProcessor& p)
     addAndMakeVisible (&cvb3);
     addAndMakeVisible (&mvComponent1);
     addAndMakeVisible (&keyboardComponent);
+    addAndMakeVisible (ADSRComponent);
     addAndMakeVisible (vComponent);
 
+   /* for (int i = 0; i < adsrCompartments.size(); ++i)
+    {
+        adsrCompartments[i] = std::make_unique<ADSRCompartment>(audioProcessor);
+        addAndMakeVisible(*adsrCompartments[i]);
+    }*/
+
     // Component button volume Switch between Volume Components
-    setButtonImages (cvb1, overlayImage1, normalImage1, downImage1);
+    /*setButtonImages (cvb1, overlayImage1, normalImage1, downImage1);
     setButtonImages (cvb2, overlayImage2, normalImage2, downImage2);
-    setButtonImages (cvb3, overlayImage3, normalImage3, downImage3);
+    setButtonImages (cvb3, overlayImage3, normalImage3, downImage3);*/
+
+    setButtonImages (cvb1);
+    setButtonImages (cvb2);
+    setButtonImages (cvb3);
 
     // Roman Book Black
     auto black = juce::Typeface::createSystemTypefaceFor (BinaryData::AvenirBook_ttf, BinaryData::AvenirBook_ttfSize);
@@ -74,9 +87,21 @@ BASAudioProcessorEditor::~BASAudioProcessorEditor()
     //delete componentToManipulate;
 }
 
-void BASAudioProcessorEditor::setButtonImages (juce::ImageButton& button, const juce::Image& overlayImage, const juce::Image& normalImage, const juce::Image& downImage)
+void BASAudioProcessorEditor::setButtonImages(juce::TextButton& button)
 {
-    button.setImages (true, true, true, overlayImage, 1.f, {}, normalImage, 1.f, {}, downImage, 1.f, {});
+    //button.setImages (true, true, true, overlayImage, 1.f, {}, normalImage, 1.f, {}, downImage, 1.f, {});
+  
+    cvb1.setButtonText("1");
+    
+    cvb2.setButtonText("2");
+   
+    cvb3.setButtonText("3");
+    button.setColour(juce::TextButton::buttonColourId, juce::Colours::transparentBlack);
+    button.setColour(juce::TextButton::buttonOnColourId, C4::lightBlack);
+    button.setColour(juce::TextButton::textColourOnId, C4::white);
+    button.setColour(juce::TextButton::textColourOffId, C4::shadeGrey);
+    button.setColour(juce::ComboBox::outlineColourId , juce::Colours::transparentBlack);
+     
     button.setClickingTogglesState (true);
     button.isAlwaysOnTop();
     button.setAlwaysOnTop (true);
@@ -96,7 +121,7 @@ void BASAudioProcessorEditor::setButtonImages (juce::ImageButton& button, const 
 void BASAudioProcessorEditor::paint (juce::Graphics& g)
 {
     background = juce::ImageCache::getFromMemory (BinaryData::Skeleton_png, BinaryData::Skeleton_pngSize);
-    g.drawImageWithin (background, 0, 0, getWidth(), getHeight(), juce::RectanglePlacement::onlyIncreaseInSize);
+    g.drawImageWithin (background, 0, 0, getWidth(), getHeight(), juce::RectanglePlacement::stretchToFit);
     // g.fillAll(C4::lightBlack);
 }
 
@@ -112,12 +137,20 @@ void BASAudioProcessorEditor::resized()
     vComponent3.setBounds (c.withY (47));
     auto d = getLocalBounds().withWidth (593).withHeight (473).withX (168.f);
     mvComponent1.setBounds (d.withY (0));
-    auto e = getLocalBounds().withWidth (595).withHeight (60).withX (168);
-    keyboardComponent.setBounds (e.withY (485));
-    auto f = getLocalBounds().withWidth (50).withHeight (50).withX (10.f);
-    cvb1.setBounds (f.withY (430));
-    auto g = getLocalBounds().withWidth (13).withHeight (18).withX (49.f);
-    cvb2.setBounds (g.withY (430));
-    auto h = getLocalBounds().withWidth (13).withHeight (18).withX (92.f);
-    cvb3.setBounds (h.withY (430));
+    auto e = getLocalBounds().withWidth (550).withHeight (60).withX (183);
+    keyboardComponent.setBounds (e.withY (490));
+    auto f = getLocalBounds().withWidth (20).withHeight (20).withX (30.f);
+    cvb1.setBounds (f.withY (437));
+    auto g = getLocalBounds().withWidth (20).withHeight (20).withX (60.f);
+    cvb2.setBounds (g.withY (437));
+    auto h = getLocalBounds().withWidth (20).withHeight (20).withX (90.f);
+    cvb3.setBounds (h.withY (437));
+    auto i = getLocalBounds().withWidth (123).withHeight (420).withX (785.f);
+    ADSRComponent.setBounds (i.withY (47));
+    /* for (unsigned int i = 0; i < adsrCompartments.size(); ++i)
+    {
+        auto compartmentBounds = getLocalBounds().withWidth (80).withHeight (80).withX (785.f);
+        adsrCompartments[i]->setBounds (compartmentBounds.withY (47));
+    }*/
+    
 }

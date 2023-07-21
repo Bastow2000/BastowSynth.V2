@@ -60,6 +60,7 @@ juce_add_binary_data(BinaryData
 	Assets/Components/V_C2.png
 	Assets/Components/V_C3.png
 	Assets/Components/M_C.png
+	Assets/Components/ADSR_C.png
 	Assets/Buttons/Normal/B1_Norm.png
 	Assets/Buttons/Normal/B2_Norm.png
 	Assets/Buttons/Normal/B3_Norm.png

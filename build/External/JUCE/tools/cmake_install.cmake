@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE
+# Install script for directory: /Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,38 +39,38 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/modules/cmake_install.cmake")
+  include("/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/modules/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/extras/Build/cmake_install.cmake")
+  include("/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/extras/Build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-7.0.5" TYPE FILE FILES
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/JUCEConfigVersion.cmake"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/JUCEConfig.cmake"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/JUCECheckAtomic.cmake"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/JUCEHelperTargets.cmake"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/JUCEModuleSupport.cmake"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/JUCEUtils.cmake"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/JuceLV2Defines.h.in"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/LaunchScreen.storyboard"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/PIPAudioProcessor.cpp.in"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/PIPAudioProcessorWithARA.cpp.in"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/PIPComponent.cpp.in"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/PIPConsole.cpp.in"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/RecentFilesMenuTemplate.nib"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/UnityPluginGUIScript.cs.in"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/checkBundleSigning.cmake"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/copyDir.cmake"
-    "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/CMake/juce_runtime_arch_detection.cpp"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/JUCEConfigVersion.cmake"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/JUCEConfig.cmake"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/JUCECheckAtomic.cmake"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/JUCEHelperTargets.cmake"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/JUCEModuleSupport.cmake"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/JUCEUtils.cmake"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/JuceLV2Defines.h.in"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/LaunchScreen.storyboard"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/PIPAudioProcessor.cpp.in"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/PIPAudioProcessorWithARA.cpp.in"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/PIPComponent.cpp.in"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/PIPConsole.cpp.in"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/RecentFilesMenuTemplate.nib"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/UnityPluginGUIScript.cs.in"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/checkBundleSigning.cmake"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/copyDir.cmake"
+    "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/CMake/juce_runtime_arch_detection.cpp"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/JUCE-7.0.5" TYPE EXECUTABLE FILES "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/juce_lv2_helper")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/JUCE-7.0.5" TYPE EXECUTABLE FILES "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/juce_lv2_helper")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/JUCE-7.0.5/juce_lv2_helper" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/JUCE-7.0.5/juce_lv2_helper")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -83,7 +83,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-7.0.5/LV2_HELPER.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-7.0.5/LV2_HELPER.cmake"
-         "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/Export/0a8757d299ae06c55806401f6461d0d1/LV2_HELPER.cmake")
+         "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/Export/0a8757d299ae06c55806401f6461d0d1/LV2_HELPER.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-7.0.5/LV2_HELPER-*.cmake")
       if(_cmake_old_config_files)
@@ -96,9 +96,9 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-7.0.5" TYPE FILE FILES "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/Export/0a8757d299ae06c55806401f6461d0d1/LV2_HELPER.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-7.0.5" TYPE FILE FILES "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/Export/0a8757d299ae06c55806401f6461d0d1/LV2_HELPER.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-7.0.5" TYPE FILE FILES "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/Export/0a8757d299ae06c55806401f6461d0d1/LV2_HELPER-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-7.0.5" TYPE FILE FILES "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/Export/0a8757d299ae06c55806401f6461d0d1/LV2_HELPER-debug.cmake")
   endif()
 endif()
 
@@ -110,5 +110,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

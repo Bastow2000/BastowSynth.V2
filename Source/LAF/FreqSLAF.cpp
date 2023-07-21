@@ -76,7 +76,16 @@ void FreqSliderLookAndFeel::drawLinearSlider (juce::Graphics& g, int x, int y, i
     brightTrack.startNewSubPath (minPoint);
     brightTrack.lineTo (maxPoint);
 
-    g.setColour (mainSliderColour_);
+     if (mainSliderColour_ != C1::grey && mainSliderColour_ != C2::grey && mainSliderColour_ != C3::grey)
+    {
+       g.setColour (mainSliderColour_.withSaturation (b_ * 0.9f).darker (0.075f));
+    }
+    else
+    {
+        // Set a fallback color for grey
+        g.setColour (mainSliderColour_);
+    }
+   
     g.strokePath (brightTrack, { brightTrackWidthGain1, juce::PathStrokeType::curved, juce::PathStrokeType::rounded });
 
     //==============================================================================
@@ -103,7 +112,7 @@ void FreqSliderLookAndFeel::drawLinearSlider (juce::Graphics& g, int x, int y, i
 
     if (mainSliderColour_ != C1::grey && mainSliderColour_ != C2::grey && mainSliderColour_ != C3::grey)
     {
-        g.setColour (mainSliderColour_.withSaturation (b_ * 0.7f).darker (0.075f));
+       // g.setColour (mainSliderColour_.withSaturation (b_ * 0.7f).darker (0.075f));
     }
     else
     {

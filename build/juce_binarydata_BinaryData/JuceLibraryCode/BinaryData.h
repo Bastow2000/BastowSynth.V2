@@ -9,19 +9,22 @@
 namespace BinaryData
 {
     extern const char*   Skeleton_png;
-    const int            Skeleton_pngSize = 521321;
+    const int            Skeleton_pngSize = 3296938;
 
     extern const char*   V_C1_png;
-    const int            V_C1_pngSize = 70701;
+    const int            V_C1_pngSize = 20409;
 
     extern const char*   V_C2_png;
-    const int            V_C2_pngSize = 70713;
+    const int            V_C2_pngSize = 20351;
 
     extern const char*   V_C3_png;
-    const int            V_C3_pngSize = 69377;
+    const int            V_C3_pngSize = 20427;
 
     extern const char*   M_C_png;
-    const int            M_C_pngSize = 166142;
+    const int            M_C_pngSize = 358590;
+
+    extern const char*   ADSR_C_png;
+    const int            ADSR_C_pngSize = 22729;
 
     extern const char*   B1_Norm_png;
     const int            B1_Norm_pngSize = 1202;
@@ -60,7 +63,7 @@ namespace BinaryData
     const int            AvenirBlack_ttfSize = 26980;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 17;
+    const int namedResourceListSize = 18;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

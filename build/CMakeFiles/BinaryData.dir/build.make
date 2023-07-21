@@ -53,10 +53,10 @@ RM = /Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Content
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2
+CMAKE_SOURCE_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bastow_boii/Desktop/BastowSynth.V2/build
+CMAKE_BINARY_DIR = "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BinaryData.dir/depend.make
@@ -70,8 +70,8 @@ include CMakeFiles/BinaryData.dir/progress.make
 include CMakeFiles/BinaryData.dir/flags.make
 
 juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp: juce_binarydata_BinaryData/JuceLibraryCode/input_file_list
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData.h"
-	cd /Users/bastow_boii/Desktop/BastowSynth.V2 && /Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Debug/juceaide binarydata BinaryData BinaryData.h /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/input_file_list
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp, juce_binarydata_BinaryData/JuceLibraryCode/BinaryData.h"
+	cd "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2" && "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Debug/juceaide" binarydata BinaryData BinaryData.h "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/input_file_list"
 
 juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp
@@ -121,246 +121,263 @@ juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp: juce_binarydata_Bin
 juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp
 
+juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp
+
 juce_binarydata_BinaryData/JuceLibraryCode/BinaryData.h: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate juce_binarydata_BinaryData/JuceLibraryCode/BinaryData.h
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData1.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData5.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData6.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData10.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData11.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData12.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData13.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.s
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o: CMakeFiles/BinaryData.dir/flags.make
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o -c /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp"
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.i
 
 CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bastow_boii/Desktop/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.s
+
+CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o: CMakeFiles/BinaryData.dir/flags.make
+CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp
+CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o: CMakeFiles/BinaryData.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o -MF CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o.d -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o -c "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp"
+
+CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp" > CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.i
+
+CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp" -o CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.s
 
 # Object files for target BinaryData
 BinaryData_OBJECTS = \
@@ -380,7 +397,8 @@ BinaryData_OBJECTS = \
 "CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData14.cpp.o" \
 "CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o" \
 "CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o" \
-"CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o"
+"CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o" \
+"CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o"
 
 # External object files for target BinaryData
 BinaryData_EXTERNAL_OBJECTS =
@@ -402,9 +420,10 @@ libBinaryData.a: CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibrar
 libBinaryData.a: CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp.o
 libBinaryData.a: CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp.o
 libBinaryData.a: CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp.o
+libBinaryData.a: CMakeFiles/BinaryData.dir/juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp.o
 libBinaryData.a: CMakeFiles/BinaryData.dir/build.make
 libBinaryData.a: CMakeFiles/BinaryData.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX static library libBinaryData.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX static library libBinaryData.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/BinaryData.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BinaryData.dir/link.txt --verbose=$(VERBOSE)
 
@@ -426,6 +445,7 @@ CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/Bin
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData15.cpp
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData16.cpp
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData17.cpp
+CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData18.cpp
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData2.cpp
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData3.cpp
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData4.cpp
@@ -434,6 +454,6 @@ CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/Bin
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData7.cpp
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData8.cpp
 CMakeFiles/BinaryData.dir/depend: juce_binarydata_BinaryData/JuceLibraryCode/BinaryData9.cpp
-	cd /Users/bastow_boii/Desktop/BastowSynth.V2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bastow_boii/Desktop/BastowSynth.V2 /Users/bastow_boii/Desktop/BastowSynth.V2 /Users/bastow_boii/Desktop/BastowSynth.V2/build /Users/bastow_boii/Desktop/BastowSynth.V2/build /Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/BinaryData.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/BinaryData.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/BinaryData.dir/depend
 

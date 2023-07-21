@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bastow_boii/Desktop/BastowSynth.V2/Source
+# Install script for directory: /Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/Source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,21 +39,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/VolumeComponents/cmake_install.cmake")
+  include("/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/MainComponents/cmake_install.cmake")
+  include("/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/LAF/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/LAF/cmake_install.cmake")
+  include("/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/DSP/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/DSP/cmake_install.cmake")
+  include("/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/ADSR/cmake_install.cmake")
 endif()
 

@@ -82,6 +82,8 @@ private:
     WavetableSynthesiserVoice* voice;
     WavetableSynthesiserVoice* activeVoice = nullptr;
     juce::LinearSmoothedValue<float> smooth { 0.0f};
+    int selectedOscillatorIndex = 1; // Calculating start index
+
     //ParameterNames parameterNames_;
     static const int kNumOscillators = 33;
     int numVoices;

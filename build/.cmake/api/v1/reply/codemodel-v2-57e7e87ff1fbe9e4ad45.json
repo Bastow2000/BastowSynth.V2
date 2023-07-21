@@ -1,0 +1,292 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"build" : "External/JUCE",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-External.JUCE-Debug-0e20e5fef05c71df16e5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "External/JUCE"
+				},
+				{
+					"build" : "External/JUCE/modules",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-External.JUCE.modules-Debug-40cf1bb76b1e7dca0657.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "External/JUCE/modules"
+				},
+				{
+					"build" : "External/JUCE/extras/Build",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-External.JUCE.extras.Build-Debug-bca0b07bbecf3fd3876e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "External/JUCE/extras/Build"
+				},
+				{
+					"build" : "External/JUCE/extras/Build/juceaide",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-External.JUCE.extras.Build.juceaide-Debug-3b3779f25f7a3baec08f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 1,
+					"source" : "External/JUCE/extras/Build/juceaide"
+				},
+				{
+					"build" : "Source",
+					"childIndexes" : 
+					[
+						6,
+						10,
+						11,
+						12
+					],
+					"jsonFile" : "directory-Source-Debug-eacbe9370dac00d92cd9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Source"
+				},
+				{
+					"build" : "Source/Components",
+					"childIndexes" : 
+					[
+						7,
+						8,
+						9
+					],
+					"jsonFile" : "directory-Source.Components-Debug-484d060081f135877bf4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "Source/Components"
+				},
+				{
+					"build" : "Source/Components/VolumeComponents",
+					"jsonFile" : "directory-Source.Components.VolumeComponents-Debug-269c01ea164250784e46.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "Source/Components/VolumeComponents"
+				},
+				{
+					"build" : "Source/Components/MainComponents",
+					"jsonFile" : "directory-Source.Components.MainComponents-Debug-8a55d284712c7a0a25c6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "Source/Components/MainComponents"
+				},
+				{
+					"build" : "Source/Components/ADSRComponent",
+					"jsonFile" : "directory-Source.Components.ADSRComponent-Debug-0e1b5a376b363667653a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "Source/Components/ADSRComponent"
+				},
+				{
+					"build" : "Source/LAF",
+					"jsonFile" : "directory-Source.LAF-Debug-597d3b812e5610c0afc0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "Source/LAF"
+				},
+				{
+					"build" : "Source/DSP",
+					"jsonFile" : "directory-Source.DSP-Debug-21c3d613a2d0383cf067.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "Source/DSP"
+				},
+				{
+					"build" : "Source/ADSR",
+					"jsonFile" : "directory-Source.ADSR-Debug-97a0bbbf17b4f6226dff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 0,
+					"source" : "Source/ADSR"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "BastowSynth",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "JUCE",
+					"parentIndex" : 0
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BastowSynth::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BastowSynth-Debug-31c9bf1458d403f71abe.json",
+					"name" : "BastowSynth",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BastowSynth_AU::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BastowSynth_AU-Debug-b025bdf02205e2ceca2b.json",
+					"name" : "BastowSynth_AU",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BastowSynth_All::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BastowSynth_All-Debug-1f6055ba4207422fc392.json",
+					"name" : "BastowSynth_All",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BastowSynth_Standalone::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BastowSynth_Standalone-Debug-044904f64b059895e7ec.json",
+					"name" : "BastowSynth_Standalone",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BastowSynth_VST3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BastowSynth_VST3-Debug-8c4012f236b7bc7a1fe5.json",
+					"name" : "BastowSynth_VST3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BinaryData::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BinaryData-Debug-c60e1b85fd2357713e38.json",
+					"name" : "BinaryData",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build",
+		"source" : "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

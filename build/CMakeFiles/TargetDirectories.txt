@@ -1,66 +1,84 @@
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/BastowSynth.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/BastowSynth_All.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/BastowSynth_Standalone.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/BastowSynth_AU.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/BastowSynth_VST3.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/BinaryData.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/VolumeComponents/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/VolumeComponents/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/VolumeComponents/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/VolumeComponents/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/VolumeComponents/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/VolumeComponents/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/MainComponents/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/MainComponents/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/MainComponents/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/MainComponents/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/MainComponents/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/MainComponents/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/LAF/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/LAF/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/LAF/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/LAF/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/LAF/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/LAF/CMakeFiles/install/strip.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/DSP/CMakeFiles/edit_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/DSP/CMakeFiles/rebuild_cache.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/DSP/CMakeFiles/list_install_components.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/DSP/CMakeFiles/install.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/DSP/CMakeFiles/install/local.dir
-/Users/bastow_boii/Desktop/BastowSynth.V2/build/Source/DSP/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/BastowSynth.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/BastowSynth_All.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/BastowSynth_Standalone.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/BastowSynth_AU.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/BastowSynth_VST3.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/BinaryData.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/modules/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/extras/Build/juceaide/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/VolumeComponents/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/VolumeComponents/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/VolumeComponents/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/VolumeComponents/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/VolumeComponents/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/VolumeComponents/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/MainComponents/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/MainComponents/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/MainComponents/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/MainComponents/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/MainComponents/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/MainComponents/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/ADSRComponent/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/ADSRComponent/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/ADSRComponent/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/ADSRComponent/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/ADSRComponent/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/Components/ADSRComponent/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/LAF/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/LAF/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/LAF/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/LAF/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/LAF/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/LAF/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/DSP/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/DSP/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/DSP/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/DSP/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/DSP/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/DSP/CMakeFiles/install/strip.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/ADSR/CMakeFiles/edit_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/ADSR/CMakeFiles/rebuild_cache.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/ADSR/CMakeFiles/list_install_components.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/ADSR/CMakeFiles/install.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/ADSR/CMakeFiles/install/local.dir
+/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/Source/ADSR/CMakeFiles/install/strip.dir

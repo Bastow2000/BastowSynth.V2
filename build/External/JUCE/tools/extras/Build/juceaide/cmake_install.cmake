@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/juceaide
+# Install script for directory: /Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/juceaide
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

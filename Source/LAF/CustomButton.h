@@ -6,7 +6,7 @@ class CustomButton : public juce::Button
 {
 public:
     CustomButton (WavetableSynthesiserVoice& voice);
-    ~CustomButton();
+    ~CustomButton()override;
 
     void paint (juce::Graphics& g) override;
     void mouseDown (const juce::MouseEvent& event) override;

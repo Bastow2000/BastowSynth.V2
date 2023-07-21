@@ -3,7 +3,7 @@
 cmake_policy(SET CMP0009 NEW)
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/juce_build_tools/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/juce_build_tools/*")
 set(OLD_GLOB
   "juce_build_tools/juce_build_tools.cpp"
   "juce_build_tools/juce_build_tools.h"
@@ -29,11 +29,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_analytics/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_analytics/*")
 set(OLD_GLOB
   "juce_analytics/analytics/juce_Analytics.cpp"
   "juce_analytics/analytics/juce_Analytics.h"
@@ -47,11 +47,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_basics/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_basics/*")
 set(OLD_GLOB
   "juce_audio_basics/audio_play_head/juce_AudioPlayHead.cpp"
   "juce_audio_basics/audio_play_head/juce_AudioPlayHead.h"
@@ -158,11 +158,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_devices/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_devices/*")
 set(OLD_GLOB
   "juce_audio_devices/audio_io/juce_AudioDeviceManager.cpp"
   "juce_audio_devices/audio_io/juce_AudioDeviceManager.h"
@@ -331,11 +331,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_formats/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_formats/*")
 set(OLD_GLOB
   "juce_audio_formats/codecs/flac/Flac Licence.txt"
   "juce_audio_formats/codecs/flac/all.h"
@@ -504,7 +504,7 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
@@ -516,7 +516,7 @@ endif()
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:462 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_plugin_client/*")
 set(OLD_GLOB
   "juce_audio_plugin_client/AAX/juce_AAX_Modifier_Injector.h"
   "juce_audio_plugin_client/AAX/juce_AAX_Wrapper.cpp"
@@ -586,11 +586,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_processors/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_processors/*")
 set(OLD_GLOB
   "juce_audio_processors/format/juce_AudioPluginFormat.cpp"
   "juce_audio_processors/format/juce_AudioPluginFormat.h"
@@ -980,11 +980,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_audio_utils/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_audio_utils/*")
 set(OLD_GLOB
   "juce_audio_utils/audio_cd/juce_AudioCDBurner.h"
   "juce_audio_utils/audio_cd/juce_AudioCDReader.cpp"
@@ -1027,11 +1027,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_box2d/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_box2d/*")
 set(OLD_GLOB
   "juce_box2d/box2d/Box2D.h"
   "juce_box2d/box2d/Collision/Shapes/b2ChainShape.cpp"
@@ -1132,11 +1132,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_core/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_core/*")
 set(OLD_GLOB
   "juce_core/containers/juce_AbstractFifo.cpp"
   "juce_core/containers/juce_AbstractFifo.h"
@@ -1410,11 +1410,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_cryptography/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_cryptography/*")
 set(OLD_GLOB
   "juce_cryptography/encryption/juce_BlowFish.cpp"
   "juce_cryptography/encryption/juce_BlowFish.h"
@@ -1434,11 +1434,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_data_structures/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_data_structures/*")
 set(OLD_GLOB
   "juce_data_structures/app_properties/juce_ApplicationProperties.cpp"
   "juce_data_structures/app_properties/juce_ApplicationProperties.h"
@@ -1464,11 +1464,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_dsp/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_dsp/*")
 set(OLD_GLOB
   "juce_dsp/containers/juce_AudioBlock.h"
   "juce_dsp/containers/juce_AudioBlock_test.cpp"
@@ -1557,11 +1557,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_events/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_events/*")
 set(OLD_GLOB
   "juce_events/broadcasters/juce_ActionBroadcaster.cpp"
   "juce_events/broadcasters/juce_ActionBroadcaster.h"
@@ -1615,11 +1615,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_graphics/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_graphics/*")
 set(OLD_GLOB
   "juce_graphics/colour/juce_Colour.cpp"
   "juce_graphics/colour/juce_Colour.h"
@@ -1794,11 +1794,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_gui_basics/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_gui_basics/*")
 set(OLD_GLOB
   "juce_gui_basics/accessibility/enums/juce_AccessibilityActions.h"
   "juce_gui_basics/accessibility/enums/juce_AccessibilityEvent.h"
@@ -2140,11 +2140,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_gui_extra/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_gui_extra/*")
 set(OLD_GLOB
   "juce_gui_extra/code_editor/juce_CPlusPlusCodeTokeniser.cpp"
   "juce_gui_extra/code_editor/juce_CPlusPlusCodeTokeniser.h"
@@ -2217,11 +2217,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_opengl/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_opengl/*")
 set(OLD_GLOB
   "juce_opengl/geometry/juce_Draggable3DOrientation.h"
   "juce_opengl/geometry/juce_Matrix3D.h"
@@ -2265,11 +2265,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_osc/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_osc/*")
 set(OLD_GLOB
   "juce_osc/juce_osc.cpp"
   "juce_osc/juce_osc.h"
@@ -2292,11 +2292,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_product_unlocking/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_product_unlocking/*")
 set(OLD_GLOB
   "juce_product_unlocking/in_app_purchases/juce_InAppPurchases.cpp"
   "juce_product_unlocking/in_app_purchases/juce_InAppPurchases.h"
@@ -2316,11 +2316,11 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()
 
 # all_module_files at extras/Build/CMake/JUCEModuleSupport.cmake:187 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/modules/juce_video/*")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules" "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/modules/juce_video/*")
 set(OLD_GLOB
   "juce_video/capture/juce_CameraDevice.cpp"
   "juce_video/capture/juce_CameraDevice.h"
@@ -2347,5 +2347,5 @@ set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs")
 endif()

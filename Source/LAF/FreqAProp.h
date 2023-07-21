@@ -1,6 +1,7 @@
 #pragma once
 #include "FreqSLAF.h"
 #include "GainSLAF.h"
+#include "ADSRsLAF.h"
 #include <JuceHeader.h>
 
 class BastowFreqSlider : public juce::Slider
@@ -39,4 +40,21 @@ private:
     GainSliderLookAndFeel glf_;
     int desiredSliderIndex_ = 1;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BastowGainSlider)
+};
+
+class BastowADSRSlider : public juce::Slider
+{
+public:
+    BastowADSRSlider();
+
+    ~BastowADSRSlider();
+
+    bool hitTest (int x, int y);
+
+    void setColour (juce::Colour colourToSet);
+
+private:
+    ADSRSliderLookAndFeel adsrlf_;
+
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BastowADSRSlider)
 };

@@ -55,6 +55,18 @@ float Wavetable::getAmplitude()
     return amplitude_;
 }
 
+void Wavetable::setCustomADSRParameters(float att, float dec, float sus, float rel, float hold, float dec2)
+{
+     amplitudeADSR.setAttackTime(att);
+        amplitudeADSR.setAttackHoldTime(hold);
+		amplitudeADSR.setDecayTime(dec);
+        amplitudeADSR.setSustainLevel(sus);
+		amplitudeADSR.setDecay2Time(dec2);
+        amplitudeADSR.setReleaseTime(rel);
+        amplitudeADSR.setSegment(dec2,rel, Release);
+}
+
+
 // Get the next sample and update the phase
 float Wavetable::linearInterpolation()
 {

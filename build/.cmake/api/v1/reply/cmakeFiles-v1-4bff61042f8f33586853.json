@@ -1,0 +1,251 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/3.26.3/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/3.26.3/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/3.26.3/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Darwin.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Compiler/Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Compiler/Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/BastowSynth_artefacts/JuceLibraryCode/BastowSynth_Standalone/Info.plist"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/BastowSynth_artefacts/JuceLibraryCode/BastowSynth_AU/Info.plist"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/BastowSynth_artefacts/JuceLibraryCode/BastowSynth_VST3/Info.plist"
+		},
+		{
+			"path" : "External/JUCE/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"path" : "External/JUCE/extras/Build/CMake/JUCEModuleSupport.cmake"
+		},
+		{
+			"path" : "External/JUCE/extras/Build/CMake/JUCEHelperTargets.cmake"
+		},
+		{
+			"path" : "External/JUCE/extras/Build/CMake/JUCECheckAtomic.cmake"
+		},
+		{
+			"path" : "External/JUCE/extras/Build/CMake/JUCEUtils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/Users/bastow_boii/Downloads/cmake-3.26.3-macos-universal/CMake.app/Contents/share/cmake-3.26/Modules/BasicConfigVersion-ExactVersion.cmake.in"
+		},
+		{
+			"path" : "External/JUCE/extras/Build/CMake/JUCEConfig.cmake.in"
+		},
+		{
+			"path" : "External/JUCE/extras/Build/CMake/JUCEConfig.cmake.in"
+		},
+		{
+			"path" : "External/JUCE/modules/CMakeLists.txt"
+		},
+		{
+			"path" : "External/JUCE/extras/Build/CMakeLists.txt"
+		},
+		{
+			"path" : "External/JUCE/extras/Build/juceaide/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/External/JUCE/tools/JUCEToolsExport.cmake"
+		},
+		{
+			"path" : "Source/CMakeLists.txt"
+		},
+		{
+			"path" : "Source/Components/CMakeLists.txt"
+		},
+		{
+			"path" : "Source/Components/VolumeComponents/CMakeLists.txt"
+		},
+		{
+			"path" : "Source/Components/MainComponents/CMakeLists.txt"
+		},
+		{
+			"path" : "Source/Components/ADSRComponent/CMakeLists.txt"
+		},
+		{
+			"path" : "Source/LAF/CMakeLists.txt"
+		},
+		{
+			"path" : "Source/DSP/CMakeLists.txt"
+		},
+		{
+			"path" : "Source/ADSR/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build",
+		"source" : "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bastow_boii/Desktop/BastowSynth.V2/External/JUCE/extras/Build/juceaide
+# Install script for directory: /Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/External/JUCE/extras/Build/juceaide
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/JUCE-7.0.5" TYPE PROGRAM FILES "/Users/bastow_boii/Desktop/BastowSynth.V2/build/External/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Debug/juceaide")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin/JUCE-7.0.5" TYPE PROGRAM FILES "/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Debug/juceaide")
 endif()
 

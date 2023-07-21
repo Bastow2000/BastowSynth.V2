@@ -71,3 +71,35 @@ void BastowGainSlider::setFont (juce::Font fontToSet)
 {
     glf_.setSliderFont (fontToSet);
 }
+
+
+BastowADSRSlider::BastowADSRSlider()
+{
+    setLookAndFeel (&adsrlf_);
+    setTextBoxStyle (juce::Slider::NoTextBox, false, 90, 0);
+    setPopupDisplayEnabled (true, false, this);
+    setTextValueSuffix (" dB");
+    setVelocityBasedMode (true);
+    setVelocityModeParameters (0.09, 1, 0.5, false);
+    //setSliderStyle (SliderStyle::RotaryHorizontalVerticalDrag);
+    setSliderStyle (SliderStyle::RotaryHorizontalVerticalDrag);
+  //  addMouseListener (this, true);
+}
+
+BastowADSRSlider::~BastowADSRSlider()
+{
+    setLookAndFeel (nullptr);
+}
+
+bool BastowADSRSlider::hitTest (int x, int y)
+{
+    int scalingFactor = 4; // Adjust the scaling factor as needed
+    int dia = std::min (getWidth(), getHeight()) * scalingFactor;
+    return getLocalBounds().getCentre().getDistanceFrom ({ x, y }) < dia;
+    return true;
+}
+
+void BastowADSRSlider::setColour (juce::Colour colourToSet)
+{
+    adsrlf_.setSliderColour (colourToSet);
+}
