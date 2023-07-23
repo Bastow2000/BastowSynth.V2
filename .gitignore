@@ -7,7 +7,8 @@
 **cmake-build**
 
 .DS_Store
-.build 
+/build
+/.vscode
 
 # Compiled Object files
 *.slo
