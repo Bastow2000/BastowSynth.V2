@@ -1,0 +1,12 @@
+# ninja log v5
+4	112	0	/Users/bastow_boii/Desktop/Alex Bastow Misc/Bastow programming/BastowSynth.V2/build/External/JUCE/tools/CMakeFiles/cmake.verify_globs	a15adf0a0141c6ba
+112	455	1690119561128194491	CMakeFiles/juce_lv2_helper.dir/modules/juce_audio_plugin_client/LV2/juce_LV2TurtleDumpProgram.cpp.o	865358b50d3835bf
+457	508	1690119561183071388	juce_lv2_helper	4521dac86b9c8d8d
+113	1197	1690119561866602638	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_data_structures/juce_data_structures.mm.o	2bb39a8553b129c9
+113	1725	1690119562391907538	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/juce_build_tools/juce_build_tools.cpp.o	eafd06faae0c34db
+112	1757	1690119562425785452	extras/Build/juceaide/CMakeFiles/juceaide.dir/Main.cpp.o	4b8e8c3cce663592
+113	2086	1690119562752021705	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_events/juce_events.mm.o	434402f65dcecea9
+113	4045	1690119564704137759	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_core/juce_core.mm.o	61d8c30ea1320778
+113	4287	1690119564948830751	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics.mm.o	400333bf40af50e1
+113	11448	1690119572087289023	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics/juce_gui_basics.mm.o	abf007d8abc50f3d
+11449	12178	1690119572849988198	extras/Build/juceaide/juceaide_artefacts/Debug/juceaide	e5ef55f3f8fe26a2

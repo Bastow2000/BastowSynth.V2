@@ -105,17 +105,17 @@ juce::AudioProcessorValueTreeState::ParameterLayout
         std::make_unique<juce::AudioParameterBool> (cvb3ParamId, CVB3Name, false);
 
     
-    auto Attack = std::make_unique<juce::AudioParameterFloat>(attackId, AttackName, juce::NormalisableRange<float>(0.001f, 0.5f), 0.01f);
+    auto Attack = std::make_unique<juce::AudioParameterFloat>(attackId, AttackName, juce::NormalisableRange<float>(0.001f, 20.f), 0.01f);
 
-    auto Decay = std::make_unique<juce::AudioParameterFloat>(decayId, DecayName, juce::NormalisableRange<float>(0.01f, 0.9f), 0.05f);
+    auto Decay = std::make_unique<juce::AudioParameterFloat>(decayId, DecayName, juce::NormalisableRange<float>(0.01f, 15.f), 0.05f);
 
-    auto Decay2 = std::make_unique<juce::AudioParameterFloat>(decay2Id, Decay2Name, juce::NormalisableRange<float>(0.01f, 1.0f), 0.1f);
+    auto Decay2 = std::make_unique<juce::AudioParameterFloat>(decay2Id, Decay2Name, juce::NormalisableRange<float>(0.01f, 20.f), 0.1f);
 
-    auto Hold = std::make_unique<juce::AudioParameterFloat>(holdId, HoldName, juce::NormalisableRange<float>(0.0f, 0.8f), 0.5f);
+    auto Hold = std::make_unique<juce::AudioParameterFloat>(holdId, HoldName, juce::NormalisableRange<float>(0.0f, 15.f), 0.5f);
 
-    auto Sustain = std::make_unique<juce::AudioParameterFloat>(sustainId, SustainName, juce::NormalisableRange<float>(0.0f, 0.8f), 0.5f);
+    auto Sustain = std::make_unique<juce::AudioParameterFloat>(sustainId, SustainName, juce::NormalisableRange<float>(0.0f, 15.f), 0.5f);
 
-    auto Release = std::make_unique<juce::AudioParameterFloat>(releaseId, ReleaseName, juce::NormalisableRange<float>(0.01f, 2.0f), 0.5f);
+    auto Release = std::make_unique<juce::AudioParameterFloat>(releaseId, ReleaseName, juce::NormalisableRange<float>(0.01f, 25.f), 0.5f);
 
     params.push_back (std::move (CVB1));
     params.push_back (std::move (CVB2));

@@ -55,17 +55,17 @@ private:
     int currentOscillatorIndex = 0;
 
     // The SliderWidth controls the amount of movement each slider has with the line
-    int sliderAWidth = 30;
+    int sliderAWidth = 1;
 
-    int sliderHWidth = 25;
+    int sliderHWidth = 1;
 
-    int sliderDWidth = 12;
+    int sliderDWidth = 1;
 
-    int sliderSWidth = 25;
+    int sliderSWidth = 1;
 
-    int sliderD2Width = 25;
+    int sliderD2Width = 1;
 
-    int sliderRWidth = 5;
+    int sliderRWidth = 1;
 
     // Define the position and height for each segment
     int yLocation = 285;

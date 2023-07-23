@@ -147,15 +147,17 @@ public:
             for (unsigned int i = 0; i < oscillators_.size(); ++i)
             {
                 envelopeValues[i] = amplitudeADSR.process();
-                value += oscillators_[i]->process() * (gains_[i] * 0.001)  * (envelopeValues[i] * 0.001);
-                value *= masterGain_;
+                value += oscillators_[i]->process() * (gains_[i] )  * (envelopeValues[i] );
+            }
+
+            value *= masterGain_;
 
                 for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
                 {
             
                     outputBuffer.addSample(channel, startSample + sample, value);
                 }
-            }
+            
         }
     }
 
