@@ -1,6 +1,6 @@
 #include "CustomButton.h"
 
-CustomButton::CustomButton (WavetableSynthesiserVoice& voice) : juce::Button ("CustomButton"), counter (0), voice_ (&voice)
+CustomButton::CustomButton (WavetableSynthesiserVoice& voice,int oscillatorIndex ) : juce::Button ("CustomButton"), oscillatorIndex_(oscillatorIndex), counter (0), voice_ (&voice)
 {
     setClickingTogglesState (true);
 }
@@ -124,13 +124,16 @@ void CustomButton::mouseDown (const juce::MouseEvent& event)
 
         counter %= 4; // Reset counter back to 0 after reaching 3
 
+
+       
+
         repaint(); // Trigger a repaint to update the button appearance
     }
-    for (unsigned int n = 0; n < kNumOscillators_; ++n)
-    {
+    
         //.setWaveType(n, counter + 1);
-        voice_->setWaveType (n, counter + 1);
-    }
+        voice_->setWaveType (oscillatorIndex_, counter + 1);
+        voice_->getWaveType(oscillatorIndex_);
+    
 }
 void CustomButton::setButtonColour (juce::Colour colourToUse)
 {

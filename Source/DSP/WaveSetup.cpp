@@ -14,7 +14,7 @@ void Wavetable::setup (float sampleRate, std::vector<float>& wavetable, float ph
     inverseSampleRate_ = 1.0 / sampleRate;
 
     // Copy other parameters
-    wavetable_ = wavetable;
+    this->wavetable_ = wavetable;
 
     phase_ = phase;
 
@@ -98,8 +98,12 @@ float Wavetable::linearInterpolation()
 float Wavetable::process()
 {
     float output = 0;
-
+    
+    // increments the readpointer based on phase 
     readPointer_ += (phaseIncrement_ * frequency_);
+    
+    // When the readpointer exceeds the wavetable size 
+    //reset the read pointer
     while (readPointer_ >= wavetable_.size())
         readPointer_ -= wavetable_.size();
 

@@ -48,7 +48,7 @@ SecondVCompartment::SecondVCompartment (BASAudioProcessor& p) : frequencySliders
     for (std::size_t i = 0; i < numButtons; ++i)
     {
         std::vector<std::unique_ptr<CustomButton>> buttons (numButtons);
-        buttons[i] = std::make_unique<CustomButton> (*voice_);
+        buttons[i] = std::make_unique<CustomButton> (*voice_, i);
         buttons[i]->addListener (this);
         buttons[i]->setClickingTogglesState (true);
         buttons[i]->setButtonColour (getFreqSliderColour (static_cast<int> (i)));

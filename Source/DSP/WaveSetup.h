@@ -3,6 +3,7 @@
 #include <JuceHeader.h>
 #include <arm_neon.h>
 #include <cmath>
+
 #include "ADSR.h"
 #include <vector>
 
@@ -62,4 +63,6 @@ private:
 
     float phase_;
     CustomADSR amplitudeADSR;
+
 };
+
