@@ -3,15 +3,29 @@ MainVCompartment::MainVCompartment (BASAudioProcessor& p)
     : gainSliders (numSliders), audioProcessor_ (p), sliderArray_ (numSliders), gainAttachments_ (numSliders)
 
 {
+    for (std::size_t i = 0; i < numSliders; ++i) // Assuming numSliders == number of oscillators
+    {
+        auto* comboBox = new juce::ComboBox("WaveTypeSelector" + juce::String(i));
+        comboBox->addItem("Sine", 1);
+        comboBox->addItem("Triangle", 2);
+        comboBox->addItem("Square", 3);
+        comboBox->addItem("Saw", 4);
+        comboBox->addListener(this);
+        comboBox->setSelectedId(1, juce::dontSendNotification); // Default to sine
+        waveTypeSelectors.add(comboBox);
+        addAndMakeVisible(comboBox);
+    }
     for (int i = 0; i < 33; ++i)
     {
     }
 
     slider_x_[0] = 2.5f; // Starting value
+    box_x_[0]=27.5f;
 
     for (int i = 1; i < 34; ++i)
     {
         slider_x_[i] = slider_x_[i - 1] + 16.0f; // Add 20 to the previous element
+        box_x_[i]=box_x_[i-1]+16.0f;
     }
 
     for (std::size_t i = 0; i < numSliders; ++i)
@@ -74,6 +88,15 @@ MainVCompartment::MainVCompartment (BASAudioProcessor& p)
 
 MainVCompartment::~MainVCompartment() {}
 
+void MainVCompartment::comboBoxChanged(juce::ComboBox* comboBoxThatHasChanged)
+{
+    int waveType = comboBoxThatHasChanged->getSelectedId();
+    int oscillatorIndex = waveTypeSelectors.indexOf(comboBoxThatHasChanged);
+
+    // Here, you would update the oscillator's wave type.
+    // This might involve calling a method on your synthesizer voice or processor.
+    DBG("Oscillator " << oscillatorIndex << " set to wave type " << waveType);
+}
 void MainVCompartment::paint (juce::Graphics& g)
 {
     // Gets background for this component
@@ -127,7 +150,12 @@ void MainVCompartment::resized()
     {
         auto a = getLocalBounds().withWidth (60).withHeight (325).withX (
             static_cast<int> (slider_x_[i]));
-        gainSliders[i].setBounds (a.withY (135));
+        gainSliders[i].setBounds (a.withY (115));
+         // Corrected to use '->' for accessing member function of ComboBox pointer
+        if (i < waveTypeSelectors.size()) { // Make sure not to access beyond the size of waveTypeSelectors
+            auto boundsForSelector = getLocalBounds().withWidth(10).withHeight(20).withX(static_cast<int>(box_x_[i]));
+            waveTypeSelectors.getUnchecked(i)->setBounds(boundsForSelector.withY(443)); // Using '->' for pointer
+        }
     }
 }
 

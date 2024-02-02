@@ -6,7 +6,7 @@
 #include "Osc.h"
 #include <JuceHeader.h>
 
-class MainVCompartment : public juce::Component, public juce::Slider::Listener
+class MainVCompartment : public juce::Component, public juce::Slider::Listener,public juce::ComboBox::Listener
 {
 public:
     MainVCompartment (BASAudioProcessor& p);
@@ -23,6 +23,7 @@ private:
     //Private Functions & variables
     //==============================================================================
     void sliderValueChanged (juce::Slider* slider) override;
+    void comboBoxChanged(juce::ComboBox* comboBoxThatHasChanged) override;
 
     BASAudioProcessor& audioProcessor_;
     juce::Image background_;
@@ -111,6 +112,8 @@ private:
     };
 
     float slider_x_[34];
+    float box_x_[34];
+    juce::OwnedArray<juce::ComboBox> waveTypeSelectors; 
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainVCompartment)
 };

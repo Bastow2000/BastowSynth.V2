@@ -84,10 +84,6 @@ public:
         return -1;
     }
 
-    void addObserver(std::function<void(unsigned int, int)> observer) 
-    {
-        observers_.push_back(observer);
-    }
     void setWaveType (unsigned int oscillatorIndex, int waveType)
     {
         if (oscillatorIndex < kNumOscillators_)
@@ -97,7 +93,7 @@ public:
             printf("Oscillator %d, Wave Type %d\n", oscillatorIndex, waveType);
             // Assuming changeOscillator does the immediate change necessary
             changeOscillator(waveType, oscillatorIndex);
-            notifyObservers(oscillatorIndex, waveType);
+            
         }
     }
 
@@ -203,13 +199,7 @@ public:
     bool buttonPressed = false;
     int midiNoteNumber_;    
 private:
-    void notifyObservers(unsigned int oscillatorIndex, int waveType) 
-    {
-        for (auto& observer : observers_) 
-        {
-            observer(oscillatorIndex, waveType); // Notify each observer with the new values
-        }
-    }
+    
     void CreateWaveTable()
     {
         sineTable_.clear();
@@ -269,10 +259,7 @@ private:
              std::cout << "Changed oscillator " << oscillatorIndex << " to wave type " << waveNumber << std::endl;
         }
     }
-    void setShouldUpdateAllOscillators(bool shouldUpdate) 
-    {
-        shouldUpdateAllOscillators = shouldUpdate;
-    }   
+   
     static constexpr unsigned int kNumOscillators_ = 33; //33
     size_t wavetableSize_;
     float level_ = 0.0f;
@@ -304,9 +291,6 @@ private:
     std::vector<std::unique_ptr<Wavetable>> oscillators_;
     juce::MidiMessage message_; 
 
-      std::vector<std::function<void(unsigned int, int)>> observers_; // Observers interested in wave type changes
-
-    bool shouldUpdateAllOscillators = false;
     std::unique_ptr<GenerateWavetable> generationSine_;
     std::unique_ptr<GenerateWavetable> generationSquare_;
     std::unique_ptr<GenerateWavetable> generationSaw_;
