@@ -1,21 +1,23 @@
 #include "CustomButton.h"
 
-CustomButton::CustomButton (WavetableSynthesiserVoice& voice,int oscillatorIndex ) : juce::Button ("CustomButton"), oscillatorIndex_(oscillatorIndex), counter (0), voice_ (&voice)
+CustomButton::CustomButton(WavetableSynthesiserVoice& voice, int oscillatorIndex)
+    : juce::Button("CustomButton"), oscillatorIndex_(oscillatorIndex), counter(0), voice_(&voice)
 {
-    setClickingTogglesState (true);
+    setClickingTogglesState(true);
 }
 
 CustomButton::~CustomButton()
 {
 }
 
-void CustomButton::paintButton (juce::Graphics& /*g*/, bool /*isMouseOver*/, bool /*isButtonDown*/)
+void CustomButton::paintButton(juce::Graphics& /*g*/, bool /*isMouseOver*/, bool /*isButtonDown*/)
 {
+    
 }
 
-void CustomButton::drawSineWave (juce::Graphics& g, int startX, int startY, int amplitude, int wavelength, int period, juce::Colour colour)
+void CustomButton::drawSineWave(juce::Graphics& g, int startX, int startY, int amplitude, int wavelength, int period, juce::Colour colour)
 {
-    g.setColour (colour);
+    g.setColour(colour);
 
     const int waveLengthPixels = wavelength * period;
     const int sineSize = 1;
@@ -24,20 +26,20 @@ void CustomButton::drawSineWave (juce::Graphics& g, int startX, int startY, int 
     // Calculate the new startY position
     startY += waveHeight + 3; // Adjust the value as needed
 
-    // Starts for loop 4 pixels in and ends at 4 pixels less than waveLengthPixels
+    // Draw the sine wave
     for (int i = 4; i < waveLengthPixels - 4; i++)
     {
         float x = startX + i;
-        float sine = amplitude * std::sin (2 * juce::MathConstants<float>::pi * i / wavelength);
+        float sine = amplitude * std::sin(2 * juce::MathConstants<float>::pi * i / wavelength);
         float y = startY + sine;
 
-        g.drawLine (static_cast<int> (x), static_cast<int> (y), static_cast<int> (x), static_cast<int> (y + 1 + waveHeight));
+        g.drawLine(static_cast<int>(x), static_cast<int>(y), static_cast<int>(x), static_cast<int>(y + 1 + waveHeight));
     }
 }
 
-void CustomButton::drawTriangleWave (juce::Graphics& g, int startX, int startY, int amplitude, int wavelength, int period, juce::Colour colour)
+void CustomButton::drawTriangleWave(juce::Graphics& g, int startX, int startY, int amplitude, int wavelength, int period, juce::Colour colour)
 {
-    g.setColour (colour);
+    g.setColour(colour);
     const int sineSize = 1;
     const int waveLengthPixels = wavelength * period;
     const int waveHeight = sineSize * 2;
@@ -45,20 +47,20 @@ void CustomButton::drawTriangleWave (juce::Graphics& g, int startX, int startY, 
     // Calculate the new startY position
     startY += waveHeight + 3; // Adjust the value as needed
 
-    // Starts for loop 4 pixels in and ends at 4 pixels less than waveLengthPixels
+    // Draw the triangle wave
     for (int i = 4; i < waveLengthPixels - 4; i++)
     {
         float x = startX + i;
-        float triangle = (2 * amplitude / juce::MathConstants<float>::pi) * std::asin (std::sin (2 * juce::MathConstants<float>::pi * i / wavelength));
+        float triangle = (2 * amplitude / juce::MathConstants<float>::pi) * std::asin(std::sin(2 * juce::MathConstants<float>::pi * i / wavelength));
         float y = startY + triangle;
 
-        g.drawLine (static_cast<int> (x), static_cast<int> (y), static_cast<int> (x), static_cast<int> (y + 1 + waveHeight));
+        g.drawLine(static_cast<int>(x), static_cast<int>(y), static_cast<int>(x), static_cast<int>(y + 1 + waveHeight));
     }
 }
 
-void CustomButton::drawSquareWave (juce::Graphics& g, int startX, int startY, juce::Colour colour)
+void CustomButton::drawSquareWave(juce::Graphics& g, int startX, int startY, juce::Colour colour)
 {
-    g.setColour (colour);
+    g.setColour(colour);
     const int sineSize = 2;
     const int period = 1;
     const int amplitude = 20;
@@ -69,8 +71,9 @@ void CustomButton::drawSquareWave (juce::Graphics& g, int startX, int startY, ju
     startY += waveHeight - 2;
     startX += 5; // Adjust the value as needed to move the wave to the right
 
+    // Draw the square wave
     // Vertical line at the start
-    g.drawLine (startX, startY, startX, startY + waveHeight * 2);
+    g.drawLine(startX, startY, startX, startY + waveHeight * 2);
 
     // First loop
     for (int i = 0; i < waveLengthPixels - 10; i += wavelength)
@@ -82,17 +85,17 @@ void CustomButton::drawSquareWave (juce::Graphics& g, int startX, int startY, ju
         int sizeInc = 1;
 
         // Draw lines with increased thickness
-        g.drawLine (static_cast<int> (x1), static_cast<int> (y1), static_cast<int> (x1), static_cast<int> (y1 + waveHeight * 2), 2);
-        g.drawLine (static_cast<int> (x1), static_cast<int> (y1), static_cast<int> (x2), static_cast<int> (y1), 2);
-        g.drawLine (static_cast<int> (x2), static_cast<int> (y1), static_cast<int> (x2), static_cast<int> (y1 + waveHeight * 2), 2);
-        g.drawLine (static_cast<int> (x2), static_cast<int> (y1 + waveHeight * 2), static_cast<int> (x3), static_cast<int> (y1 + waveHeight * 2), 2);
-        g.drawLine (static_cast<int> (x3), static_cast<int> (y1 + sizeInc), static_cast<int> (x3), static_cast<int> (y1 + waveHeight * 2), 2);
+        g.drawLine(static_cast<int>(x1), static_cast<int>(y1), static_cast<int>(x1), static_cast<int>(y1 + waveHeight * 2), 2);
+        g.drawLine(static_cast<int>(x1), static_cast<int>(y1), static_cast<int>(x2), static_cast<int>(y1), 2);
+        g.drawLine(static_cast<int>(x2), static_cast<int>(y1), static_cast<int>(x2), static_cast<int>(y1 + waveHeight * 2), 2);
+        g.drawLine(static_cast<int>(x2), static_cast<int>(y1 + waveHeight * 2), static_cast<int>(x3), static_cast<int>(y1 + waveHeight * 2), 2);
+        g.drawLine(static_cast<int>(x3), static_cast<int>(y1 + sizeInc), static_cast<int>(x3), static_cast<int>(y1 + waveHeight * 2), 2);
     }
 }
 
-void CustomButton::drawSawWave (juce::Graphics& g, int startX, int startY, juce::Colour colour)
+void CustomButton::drawSawWave(juce::Graphics& g, int startX, int startY, juce::Colour colour)
 {
-    g.setColour (colour);
+    g.setColour(colour);
     const int amplitude = 10;
     const int wavelength = 25;
     const int period = 1;
@@ -101,7 +104,8 @@ void CustomButton::drawSawWave (juce::Graphics& g, int startX, int startY, juce:
 
     startX += 5;
 
-    g.drawLine (startX, startY, startX, startY + amplitude, 2);
+    // Draw the sawtooth wave
+    g.drawLine(startX, startY, startX, startY + amplitude, 2);
 
     // First loop
     for (int i = 0; i < waveLengthPixels; i += wavelength)
@@ -111,51 +115,49 @@ void CustomButton::drawSawWave (juce::Graphics& g, int startX, int startY, juce:
         float x2 = startX + i + wavelength / 2;
         float y2 = startY + amplitude;
 
-        g.drawLine (static_cast<int> (x1), static_cast<int> (y1), static_cast<int> (x2), static_cast<int> (y2), 2);
-        g.drawLine (static_cast<int> (x2), static_cast<int> (y2), static_cast<int> (x2), static_cast<int> (y1 / 2), 2);
+        g.drawLine(static_cast<int>(x1), static_cast<int>(y1), static_cast<int>(x2), static_cast<int>(y2), 2);
+        g.drawLine(static_cast<int>(x2), static_cast<int>(y2), static_cast<int>(x2), static_cast<int>(y1 / 2), 2);
     }
 }
 
-void CustomButton::mouseDown (const juce::MouseEvent& event)
+void CustomButton::mouseDown(const juce::MouseEvent& event)
 {
     if (event.mods.isLeftButtonDown())
     {
+        // Reset counter back to 0 after reaching 3
         counter++;
+        counter %= 4; 
 
-        counter %= 4; // Reset counter back to 0 after reaching 3
-
-
+        // Trigger a repaint to update the button appearance
+        repaint(); 
+    }
        
 
-        repaint(); // Trigger a repaint to update the button appearance
-    }
-    
-        //.setWaveType(n, counter + 1);
-        voice_->setWaveType (oscillatorIndex_, counter + 1);
-        voice_->getWaveType(oscillatorIndex_);
-    
+    voice_->setWaveType(oscillatorIndex_, counter + 1);
+    voice_->getWaveType(oscillatorIndex_);
 }
-void CustomButton::setButtonColour (juce::Colour colourToUse)
+
+void CustomButton::setButtonColour(juce::Colour colourToUse)
 {
     mainSliderColour_ = colourToUse;
 }
-void CustomButton::paint (juce::Graphics& g)
+
+void CustomButton::paint(juce::Graphics& g)
 {
     if (counter == 0)
     {
-        drawSineWave (g, 0, 0, amplitude_, wavelength_, period_, mainSliderColour_);
-        // voice->setWaveType(33,1);
+        drawSineWave(g, 0, 0, amplitude_, wavelength_, period_, mainSliderColour_);
     }
     else if (counter == 1)
     {
-        drawTriangleWave (g, 0, 0, amplitude_, wavelength_, period_, mainSliderColour_);
+        drawTriangleWave(g, 0, 0, amplitude_, wavelength_, period_, mainSliderColour_);
     }
     else if (counter == 2)
     {
-        drawSquareWave (g, 0, 0, mainSliderColour_);
+        drawSquareWave(g, 0, 0, mainSliderColour_);
     }
     else if (counter == 3)
     {
-        drawSawWave (g, 0, 0, mainSliderColour_);
+        drawSawWave(g, 0, 0, mainSliderColour_);
     }
 }

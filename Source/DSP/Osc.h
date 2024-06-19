@@ -5,6 +5,8 @@
 #include "Ramp.h"
 
 #include <JuceHeader.h>
+
+// Enum for different wave types
 struct WaveTypes {
     enum Type {
         Sine = 1,
@@ -13,6 +15,7 @@ struct WaveTypes {
         Saw = 4
     };
 };
+
 class WavetableSynthesiserSound : public juce::SynthesiserSound
 {
 public:
@@ -24,7 +27,7 @@ class WavetableSynthesiserVoice : public juce::SynthesiserVoice
 {
 public:
     WavetableSynthesiserVoice()
-        :  waveType_ (kNumOscillators_, 0),
+        :  waveType_ (kNumOscillators_, WaveTypes::Sine),
         wavetableSize_ (1024),
         gains_ (kNumOscillators_),
         sineTable_ (wavetableSize_),
@@ -89,11 +92,6 @@ public:
         if (oscillatorIndex < kNumOscillators_)
         {
             waveType_[oscillatorIndex] = waveType;
-            
-            printf("Oscillator %d, Wave Type %d\n", oscillatorIndex, waveType);
-            // Assuming changeOscillator does the immediate change necessary
-            changeOscillator(waveType, oscillatorIndex);
-            
         }
     }
 
@@ -116,37 +114,21 @@ public:
         amplitudeADSR.trigger();
         float oscillatorFrequency;
         float oscGain;
-      
-        oscillatorIndex_ =  (oscillatorIndex_+1) %4  ; 
-        if (oscillatorIndex_ == 0) 
-        {
-            wavetype_ = (wavetype_ + 1) % 4; // Cycle through 4 wave types
-        }
-       
-        changeOscillator(wavetype_, oscillatorIndex_);
-        std::cout << "StartNote wavetype_: " << wavetype_ << ", oscillatorIndex_: " << oscillatorIndex_ << std::endl;
-
-        //changeOscillator(wavetype_, oscillatorIndex_);
+    
         for (unsigned int n = 0; n < kNumOscillators_; ++n)
         {
-            
-            
+            changeOscillator(waveType_[n], n);
             float pitchHz = 440.0f * std::pow(2.0f, (midiNoteNumber - 69) / 12.0f) * (n+1);
             float harmonicFrequency =  pitchHz ; // calculate frequency for the current harmonic
             frequencyN_[n] = harmonicFrequency; //+ frequencyOffset;
             level_ = velocity;
            
-                oscillatorFrequency = frequencyN_[n];
-                oscillators_[n]->setFrequency (oscillatorFrequency);
+            oscillatorFrequency = frequencyN_[n];
+            oscillators_[n]->setFrequency (oscillatorFrequency);
 
-                oscGain = gains_[n];
+            oscGain = gains_[n];
 
-                oscillators_[n]->setAmplitude (oscGain);
-               
-            if ( n == oscillatorIndex_) 
-            { // shouldUpdateAllOscillators is a conditional flag you define
-              std::cout << "Updating oscillator " << n << " with new settings." << std::endl;
-            }
+            oscillators_[n]->setAmplitude (oscGain);
         }
     }
 
@@ -164,14 +146,13 @@ public:
     {
         amplitudeADSR.setAttackTime(att);
         amplitudeADSR.setAttackHoldTime(hold);
-		amplitudeADSR.setDecayTime(dec);
+        amplitudeADSR.setDecayTime(dec);
         amplitudeADSR.setSustainLevel(sus);
-		amplitudeADSR.setDecay2Time(dec2);
+        amplitudeADSR.setDecay2Time(dec2);
         amplitudeADSR.setReleaseTime(rel);
         amplitudeADSR.setSegment(dec2,rel, Release);
     }
 
-    
     void renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override
     {
         std::array<float,kNumOscillators_> envelopeValues;
@@ -186,20 +167,41 @@ public:
 
             value *= masterGain_;
 
-                for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
-                {
-            
-                    outputBuffer.addSample(channel, startSample + sample, value);
-                }
-            
+            for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
+            {
+                outputBuffer.addSample(channel, startSample + sample, value);
+            }
         }
     }
 
-    std::vector<int> waveType_;
-    bool buttonPressed = false;
-    int midiNoteNumber_;    
 private:
-    
+    static constexpr unsigned int kNumOscillators_ = 33; //33
+    size_t wavetableSize_;
+    float level_ = 0.0f;
+    float phase_ = 0.0f;
+    float masterGain_ = 0.0f;
+    float frequencyIncrement_ = 5.2f;
+    int pitchBendUpSemitones_ = 24;
+    int pitchBendDownSemitones_ = 12;
+    int midiNoteNumber_;    
+    juce::MidiMessage message_; 
+
+    std::vector<int> waveType_;
+    std::vector<float> gains_;
+    std::vector<float> sineTable_;
+    std::vector<float> triangleTable_;
+    std::vector<float> sawTable_;
+    std::vector<float> squareTable_;
+    std::vector<float> frequencyP_;
+    std::vector<float> frequencyN_;
+    std::vector<std::unique_ptr<Wavetable>> oscillators_;
+
+    CustomADSR amplitudeADSR;
+    std::unique_ptr<GenerateWavetable> generationSine_;
+    std::unique_ptr<GenerateWavetable> generationSquare_;
+    std::unique_ptr<GenerateWavetable> generationSaw_;
+    std::unique_ptr<GenerateWavetable> generationTriangle_;
+
     void CreateWaveTable()
     {
         sineTable_.clear();
@@ -213,10 +215,7 @@ private:
         squareTable_ = generationSquare_->prompt_Carrier ();
         triangleTable_ = generationTriangle_->prompt_Carrier ();
         sawTable_ = generationSaw_->prompt_Carrier ();
-        
     }
-
-
 
     void CreateOscillator()
     {
@@ -231,68 +230,24 @@ private:
 
     void changeOscillator(int waveNumber, int oscillatorIndex)
     {
-        //CreateWaveTable();
-       
         if (oscillatorIndex >= 0 && oscillatorIndex < kNumOscillators_)
         {
-           // oscillators_.clear();
-           // oscillators_.resize (kNumOscillators_);
             switch (waveNumber)
             {
                 case WaveTypes::Sine: // Sine Wave
-                   
                     oscillators_[oscillatorIndex] = std::make_unique<Wavetable> ((float) getSampleRate(), sineTable_, phase_);
                     break;
                 case WaveTypes::Triangle: // Triangle Wave
-                    
                     oscillators_[oscillatorIndex] = std::make_unique<Wavetable> ((float) getSampleRate(), squareTable_, phase_);
                     break;
                 case WaveTypes::Square: // Square Wave
-                   
                     oscillators_[oscillatorIndex] = std::make_unique<Wavetable> ((float) getSampleRate(), triangleTable_, phase_);
                     break;
                 case WaveTypes::Saw: // Sawtooth Wave
-                   
                     oscillators_[oscillatorIndex] = std::make_unique<Wavetable> ((float) getSampleRate(), sawTable_, phase_);
                     break;
             }
-             std::cout << "Changed oscillator " << oscillatorIndex << " to wave type " << waveNumber << std::endl;
+            std::cout << "Changed oscillator " << oscillatorIndex << " to wave type " << waveNumber << std::endl;
         }
     }
-   
-    static constexpr unsigned int kNumOscillators_ = 33; //33
-    size_t wavetableSize_;
-    float level_ = 0.0f;
-    float phase_ = 0.0f;
-    float masterGain_ = 0.0f;
-    float frequencyIncrement_ = 5.2f;
-    int pitchBendUpSemitones_ = 24;
-    int pitchBendDownSemitones_ = 12;
-    int oscillatorIndex_;
-    int wavetype_;
-    juce::ADSR adsr;
-    CustomADSR amplitudeADSR;
-    
-    juce::ADSR::Parameters adsrParameters;
-    std::vector<juce::ADSR::Parameters> adsrParams_;
-
-
-
-    std::vector<float> gains_;
-    std::vector<float> sineTable_;
-    std::vector<float> triangleTable_;
-    std::vector<float> sawTable_;
-    std::vector<float> squareTable_;
-
-    std::vector<float> frequencyP_;
-    std::vector<float> frequencyN_;
-    
-
-    std::vector<std::unique_ptr<Wavetable>> oscillators_;
-    juce::MidiMessage message_; 
-
-    std::unique_ptr<GenerateWavetable> generationSine_;
-    std::unique_ptr<GenerateWavetable> generationSquare_;
-    std::unique_ptr<GenerateWavetable> generationSaw_;
-     std::unique_ptr<GenerateWavetable> generationTriangle_;
 };

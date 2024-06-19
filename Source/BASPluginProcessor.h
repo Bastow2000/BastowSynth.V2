@@ -61,6 +61,7 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
     void initialiseSynth();
+    juce::AudioProcessorValueTreeState& getTree() { return tree; };
     void setWaveType(unsigned int index, int waveType);
    
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();

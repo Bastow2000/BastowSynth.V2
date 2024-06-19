@@ -12,19 +12,19 @@
 //==============================================================================
 BASAudioProcessor::BASAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
-    : AudioProcessor (
-        BusesProperties()
-#if ! JucePlugin_IsMidiEffect
-#if ! JucePlugin_IsSynth
-            .withInput ("Input", juce::AudioChannelSet::stereo(), true)
+    : AudioProcessor(
+          BusesProperties()
+#if !JucePlugin_IsMidiEffect
+#if !JucePlugin_IsSynth
+              .withInput("Input", juce::AudioChannelSet::stereo(), true)
 #endif
-            .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
+              .withOutput("Output", juce::AudioChannelSet::stereo(), true)
 #endif
-            ),
-      tree (*this, nullptr, "PARAMETERS", createParameterLayout())
+          ),
+      tree(*this, nullptr, "PARAMETERS", createParameterLayout())
 #endif
 {
-    keyboardState.addListener (this);
+    keyboardState.addListener(this);
 
     numVoices = 4;
     initialiseSynth();
@@ -38,131 +38,114 @@ void BASAudioProcessor::initialiseSynth()
     synthesiser.clearSounds();
     for (int i = numVoices; --i >= 0;)
     {
-        synthesiser.addVoice (new WavetableSynthesiserVoice());
+        synthesiser.addVoice(new WavetableSynthesiserVoice());
     }
 
-    synthesiser.addSound (new WavetableSynthesiserSound());
+    synthesiser.addSound(new WavetableSynthesiserSound());
 }
-juce::AudioProcessorValueTreeState::ParameterLayout
-    BASAudioProcessor::createParameterLayout()
+
+juce::AudioProcessorValueTreeState::ParameterLayout BASAudioProcessor::createParameterLayout()
 {
     std::vector<std::unique_ptr<juce::RangedAudioParameter>> params;
 
-    params.reserve ((3 * 33) + 10); // Reserve space for 33 sets of parameters
+    params.reserve((3 * 33) + 10); // Reserve space for 33 sets of parameters
 
-    constexpr static auto createParamIdWithIndex = [] (auto name, auto index)
-    {
-        return juce::ParameterID { std::string { name } + std::to_string (index),
-                                   versionHint };
+    // Helper lambdas for creating parameter IDs and names
+    constexpr static auto createParamIdWithIndex = [](auto name, auto index) {
+        return juce::ParameterID{std::string{name} + std::to_string(index), versionHint};
     };
 
-    constexpr static auto createParameterNameWithIndex = [] (auto name,
-                                                             auto index)
-    {
-        return concatenateStringAndInt (name, index);
+    constexpr static auto createParameterNameWithIndex = [](auto name, auto index) {
+        return concatenateStringAndInt(name, index);
     };
 
     for (int i = 0; i < 33; i++)
     {
-        const auto gainId = createParamIdWithIndex (baseGainId, i);
-        const auto gainName = createParameterNameWithIndex (baseGainName, i);
+        const auto gainId = createParamIdWithIndex(baseGainId, i);
+        const auto gainName = createParameterNameWithIndex(baseGainName, i);
 
-        const auto freqId = createParamIdWithIndex (baseFreqId, i);
-        const auto freqName = createParameterNameWithIndex (baseFreqName, i);
+        const auto freqId = createParamIdWithIndex(baseFreqId, i);
+        const auto freqName = createParameterNameWithIndex(baseFreqName, i);
 
-        
+        const auto wavetypeId = createParamIdWithIndex(baseWaveTypeId, i);
+        const auto wavetypeName = createParameterNameWithIndex(baseWaveTypeName, i);
 
-        const auto wavetypeId = createParamIdWithIndex (baseWaveTypeId, i);
-        const auto wavetypeName = createParameterNameWithIndex (baseWaveTypeName, i);
+        auto gainParameter = std::make_unique<juce::AudioParameterFloat>(
+            gainId, gainName, juce::NormalisableRange<float>(-64.0f, -12.0f, 1.0), -64.0f);
 
+        auto freqParameter = std::make_unique<juce::AudioParameterFloat>(
+            freqId, freqName, juce::NormalisableRange<float>(-24.0f, +24.0f, 0.0), 1.0f);
 
-        auto gainParameter = std::make_unique<juce::AudioParameterFloat> (
-            gainId, gainName, juce::NormalisableRange<float> (-64.0f, -12.0f, 1.0), -64.0f);
+        auto waveTypeParameter = std::make_unique<juce::AudioParameterChoice>(
+            wavetypeId,                // Parameter ID
+            wavetypeName,              // Parameter name
+            juce::StringArray{"Sine", "Triangle", "Square", "Saw"}, // Options
+            0                          // Default option index
+        );
 
-        auto freqParameter = std::make_unique<juce::AudioParameterFloat> (
-            freqId, freqName, juce::NormalisableRange<float> (-24.0f, +24.0f, 0.0), 1.0f);
-
-        auto waveTypeParameter = std::make_unique<juce::AudioParameterBool> (
-            wavetypeId, wavetypeName, false);
-
-        params.push_back (std::move (waveTypeParameter));
-        params.push_back (std::move (gainParameter));
-        params.push_back (std::move (freqParameter));
+        params.push_back(std::move(waveTypeParameter));
+        params.push_back(std::move(gainParameter));
+        params.push_back(std::move(freqParameter));
     }
 
-    const auto masterGainParamId = juce::ParameterID { "gainIdM", versionHint };
-    auto MasterGainParameter = std::make_unique<juce::AudioParameterFloat> (
-        masterGainParamId, GainNameM, juce::NormalisableRange<float> (-60.0f, 6.0f, 1.0), -64.0f);
+    // Add additional parameters
+    const auto masterGainParamId = juce::ParameterID{"gainIdM", versionHint};
+    auto MasterGainParameter = std::make_unique<juce::AudioParameterFloat>(
+        masterGainParamId, GainNameM, juce::NormalisableRange<float>(-60.0f, 6.0f, 1.0), -64.0f);
+
     // Component Volume Button1 - 3
-    const auto cvb1ParamId = juce::ParameterID { cvb1Id, versionHint };
-    auto CVB1 =
-        std::make_unique<juce::AudioParameterBool> (cvb1ParamId, CVB1Name, false);
-    const auto cvb2ParamId = juce::ParameterID { cvb2Id, versionHint };
-    auto CVB2 =
-        std::make_unique<juce::AudioParameterBool> (cvb2ParamId, CVB2Name, false);
-    const auto cvb3ParamId = juce::ParameterID { cvb3Id, versionHint };
-    auto CVB3 =
-        std::make_unique<juce::AudioParameterBool> (cvb3ParamId, CVB3Name, false);
+    const auto cvb1ParamId = juce::ParameterID{cvb1Id, versionHint};
+    auto CVB1 = std::make_unique<juce::AudioParameterBool>(cvb1ParamId, CVB1Name, false);
+    const auto cvb2ParamId = juce::ParameterID{cvb2Id, versionHint};
+    auto CVB2 = std::make_unique<juce::AudioParameterBool>(cvb2ParamId, CVB2Name, false);
+    const auto cvb3ParamId = juce::ParameterID{cvb3Id, versionHint};
+    auto CVB3 = std::make_unique<juce::AudioParameterBool>(cvb3ParamId, CVB3Name, false);
 
-    
     auto Attack = std::make_unique<juce::AudioParameterFloat>(attackId, AttackName, juce::NormalisableRange<float>(0.001f, 20.f), 0.01f);
-
     auto Decay = std::make_unique<juce::AudioParameterFloat>(decayId, DecayName, juce::NormalisableRange<float>(0.01f, 15.f), 0.05f);
-
     auto Decay2 = std::make_unique<juce::AudioParameterFloat>(decay2Id, Decay2Name, juce::NormalisableRange<float>(0.01f, 20.f), 0.1f);
-
     auto Hold = std::make_unique<juce::AudioParameterFloat>(holdId, HoldName, juce::NormalisableRange<float>(0.0f, 15.f), 0.5f);
-
     auto Sustain = std::make_unique<juce::AudioParameterFloat>(sustainId, SustainName, juce::NormalisableRange<float>(0.0f, 15.f), 0.5f);
-
     auto Release = std::make_unique<juce::AudioParameterFloat>(releaseId, ReleaseName, juce::NormalisableRange<float>(0.01f, 25.f), 0.5f);
 
-    params.push_back (std::move (CVB1));
-    params.push_back (std::move (CVB2));
-    params.push_back (std::move (CVB3));
-    params.push_back (std::move (Attack));
-    params.push_back (std::move (Decay));
-    params.push_back (std::move (Decay2));
-    params.push_back (std::move (Hold));
-    params.push_back (std::move (Sustain));
-    params.push_back (std::move (Release));
-    params.push_back (std::move (MasterGainParameter));
+    params.push_back(std::move(CVB1));
+    params.push_back(std::move(CVB2));
+    params.push_back(std::move(CVB3));
+    params.push_back(std::move(Attack));
+    params.push_back(std::move(Decay));
+    params.push_back(std::move(Decay2));
+    params.push_back(std::move(Hold));
+    params.push_back(std::move(Sustain));
+    params.push_back(std::move(Release));
+    params.push_back(std::move(MasterGainParameter));
 
-    return { params.begin(), params.end() };
+    return {params.begin(), params.end()};
 }
 
-void BASAudioProcessor::handleIncomingMidiMessage (
-    juce::MidiInput* source,
-    const juce::MidiMessage& message)
+
+void BASAudioProcessor::handleIncomingMidiMessage(juce::MidiInput* source, const juce::MidiMessage& message)
 {
-    const juce::ScopedValueSetter<bool> scopedInputFlag (isAddingFromMidiInput,
-                                                         true);
-    keyboardState.processNextMidiEvent (message);
+    const juce::ScopedValueSetter<bool> scopedInputFlag(isAddingFromMidiInput, true);
+    keyboardState.processNextMidiEvent(message);
 }
 
-void BASAudioProcessor::handleNoteOn (juce::MidiKeyboardState*, int midiChannel, int midiNoteNumber, float velocity)
+void BASAudioProcessor::handleNoteOn(juce::MidiKeyboardState*, int midiChannel, int midiNoteNumber, float velocity)
 {
-    juce::MidiMessage m (
-        juce::MidiMessage::noteOn (midiChannel, midiNoteNumber, velocity));
-    synthesiser.noteOn (midiChannel, midiNoteNumber, velocity);
+    juce::MidiMessage m(juce::MidiMessage::noteOn(midiChannel, midiNoteNumber, velocity));
+    synthesiser.noteOn(midiChannel, midiNoteNumber, velocity);
 }
 
-void BASAudioProcessor::handleNoteOff (juce::MidiKeyboardState*,
-                                       int midiChannel,
-                                       int midiNoteNumber,
-                                       float velocity)
+void BASAudioProcessor::handleNoteOff(juce::MidiKeyboardState*, int midiChannel, int midiNoteNumber, float velocity)
 {
-    juce::MidiMessage m (
-        juce::MidiMessage::noteOff (midiChannel, midiNoteNumber, velocity));
-    synthesiser.noteOff (midiChannel, midiNoteNumber, velocity, true);
+    juce::MidiMessage m(juce::MidiMessage::noteOff(midiChannel, midiNoteNumber, velocity));
+    synthesiser.noteOff(midiChannel, midiNoteNumber, velocity, true);
 }
 
-void BASAudioProcessor::handlePitchWheel (juce::MidiKeyboardState*,
-                                          int midiChannel,
-                                          int wheelValue)
+void BASAudioProcessor::handlePitchWheel(juce::MidiKeyboardState*, int midiChannel, int wheelValue)
 {
-    synthesiser.handlePitchWheel (midiChannel, wheelValue);
+    synthesiser.handlePitchWheel(midiChannel, wheelValue);
 }
+
 //==============================================================================
 const juce::String BASAudioProcessor::getName() const
 {
@@ -196,49 +179,64 @@ bool BASAudioProcessor::isMidiEffect() const
 #endif
 }
 
-double BASAudioProcessor::getTailLengthSeconds() const { return 0.0; }
+double BASAudioProcessor::getTailLengthSeconds() const
+{
+    return 0.0;
+}
 
 int BASAudioProcessor::getNumPrograms()
 {
     return 1; // NB: some hosts don't cope very well if you tell them there are 0
-        // programs, so this should be at least 1, even if you're not really
-        // implementing programs.
+              // programs, so this should be at least 1, even if you're not really
+              // implementing programs.
 }
 
-int BASAudioProcessor::getCurrentProgram() { return 0; }
+int BASAudioProcessor::getCurrentProgram()
+{
+    return 0;
+}
 
-void BASAudioProcessor::setCurrentProgram (int index) {}
+void BASAudioProcessor::setCurrentProgram(int index) {}
 
-const juce::String BASAudioProcessor::getProgramName (int index) { return {}; }
+const juce::String BASAudioProcessor::getProgramName(int index)
+{
+    return {};
+}
 
-void BASAudioProcessor::changeProgramName (int index,
-                                           const juce::String& newName) {}
+void BASAudioProcessor::changeProgramName(int index, const juce::String& newName) {}
 
 //==============================================================================
-void BASAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+void BASAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
 {
-    juce::ignoreUnused (samplesPerBlock);
+    juce::ignoreUnused(samplesPerBlock);
     auto lastSampleRate = sampleRate;
-    double currentGain =
-        juce::Decibels::decibelsToGain (*tree.getRawParameterValue (gainIdM) + 0.0);
-    smooth.reset (sampleRate, 0.1);
-    smooth.setTargetValue (static_cast<float> (currentGain));
+    double currentGain = juce::Decibels::decibelsToGain(*tree.getRawParameterValue(gainIdM) + 0.0);
+    smooth.reset(sampleRate, 0.1);
+    smooth.setTargetValue(static_cast<float>(currentGain));
     smooth.getNextValue();
-    synthesiser.setCurrentPlaybackSampleRate (lastSampleRate);
+    synthesiser.setCurrentPlaybackSampleRate(lastSampleRate);
+
+    // Ensure voices are added to the synthesizer
+    for (int i = 0; i < 8; ++i) // Adjust the number of voices as needed
+    {
+        synthesiser.addVoice(new WavetableSynthesiserVoice());
+    }
+
+    synthesiser.addSound(new WavetableSynthesiserSound());
 }
+
 
 void BASAudioProcessor::releaseResources()
 {
-    // When playback stops, you can use this as an opportunity to free up any
-    // spare memory, etc.
+    synthesiser.clearVoices();
+    synthesiser.clearSounds();
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
-bool BASAudioProcessor::isBusesLayoutSupported (
-    const BusesLayout& layouts) const
+bool BASAudioProcessor::isBusesLayoutSupported(const BusesLayout& layouts) const
 {
 #if JucePlugin_IsMidiEffect
-    juce::ignoreUnused (layouts);
+    juce::ignoreUnused(layouts);
     return true;
 #else
     // This is the place where you check if the layout is supported.
@@ -248,8 +246,8 @@ bool BASAudioProcessor::isBusesLayoutSupported (
     if (layouts.getMainOutputChannelSet() != juce::AudioChannelSet::mono() && layouts.getMainOutputChannelSet() != juce::AudioChannelSet::stereo())
         return false;
 
-        // This checks if the input layout matches the output layout
-#if ! JucePlugin_IsSynth
+    // This checks if the input layout matches the output layout
+#if !JucePlugin_IsSynth
     if (layouts.getMainOutputChannelSet() != layouts.getMainInputChannelSet())
         return false;
 #endif
@@ -259,63 +257,52 @@ bool BASAudioProcessor::isBusesLayoutSupported (
 }
 #endif
 
-void BASAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
-                                      juce::MidiBuffer& midiMessages)
+void BASAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
-    buffer.clear();
-    midiMessages.clear();
- 
-
     for (int i = 0; i < synthesiser.getNumVoices(); i++)
     {
-        if ((voice = dynamic_cast<WavetableSynthesiserVoice*> (
-                 synthesiser.getVoice (i))))
+        if (auto* voice = dynamic_cast<WavetableSynthesiserVoice*>(synthesiser.getVoice(i)))
         {
-            double currentGainMaster = juce::Decibels::decibelsToGain (
-                *tree.getRawParameterValue (gainIdM) + 0.0);
-            voice->setMasterGain (static_cast<float> (currentGainMaster));
-            
+            double currentGainMaster = juce::Decibels::decibelsToGain(*tree.getRawParameterValue(gainIdM) + 0.0);
+            voice->setMasterGain(static_cast<float>(currentGainMaster));
+
             float attack = *tree.getRawParameterValue(attackId);
             float release = *tree.getRawParameterValue(releaseId);
             float sustain = *tree.getRawParameterValue(sustainId);
-            float decay =  *tree.getRawParameterValue(decayId);
+            float decay = *tree.getRawParameterValue(decayId);
             float hold = *tree.getRawParameterValue(holdId);
-            float decay2 =  *tree.getRawParameterValue(decay2Id);
-            voice->setCustomADSRParameters(attack, hold, decay, sustain,decay2, release);
-            //voice->setADSRParameters(attack, decay, sustain, release);
-    
-            std::array<float, kNumOscillators> button;
+            float decay2 = *tree.getRawParameterValue(decay2Id);
+
+            voice->setCustomADSRParameters(attack, hold, decay, sustain, decay2, release);
+
             std::array<float, kNumOscillators> currentGain;
             std::array<int, kNumOscillators> frequency;
+            std::array<int, kNumOscillators> waveType;
 
-            for (unsigned int n = 0; n < 33; ++n)
+            for (unsigned int n = 0; n < kNumOscillators; ++n)
             {
-                currentGain[n] = juce::Decibels::decibelsToGain (*tree.getRawParameterValue ("gainId" + std::to_string (static_cast<std::size_t> (n)))+ 0.0);
-                
-                frequency[n] = static_cast<int> (*tree.getRawParameterValue ("freqId" + std::to_string (static_cast<std::size_t> (n))));
-                button[n] = static_cast<int> (*tree.getRawParameterValue ("waveTypeId" + std::to_string (static_cast<std::size_t> (n))));
-                voice->buttonPressed = (button[n] == 1);
-                voice->setGain (n, currentGain[n]);
-                voice->setFrequency (n, frequency[n]);
-                
+                currentGain[n] = juce::Decibels::decibelsToGain(*tree.getRawParameterValue("gainId" + std::to_string(n)) + 0.0);
+                frequency[n] = static_cast<int>(*tree.getRawParameterValue("freqId" + std::to_string(n)));
+                waveType[n] = static_cast<int>(*tree.getRawParameterValue("waveTypeId" + std::to_string(n)));
+
+                voice->setWaveType(n, waveType[n]);
+                voice->setGain(n, currentGain[n]);
+                voice->setFrequency(n, frequency[n]);
             }
         }
     }
-    // Render the next block of audio using the synthesizer
-    synthesiser.renderNextBlock (buffer, midiMessages, 0, buffer.getNumSamples());
+
+    synthesiser.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }
 
-void BASAudioProcessor::getNextAudioBlock (
-    const juce::AudioSourceChannelInfo& bufferToFill)
+void BASAudioProcessor::getNextAudioBlock(const juce::AudioSourceChannelInfo& bufferToFill)
 {
     bufferToFill.clearActiveBufferRegion();
     juce::MidiBuffer incomingMidi;
-    midiCollector.removeNextBlockOfMessages (incomingMidi,
-                                             bufferToFill.numSamples);
-    keyboardState.processNextMidiBuffer (incomingMidi, 0, bufferToFill.numSamples, true);
+    midiCollector.removeNextBlockOfMessages(incomingMidi, bufferToFill.numSamples);
+    keyboardState.processNextMidiBuffer(incomingMidi, 0, bufferToFill.numSamples, true);
 
-    // synthesiser.renderNextBlock (*bufferToFill.buffer, incomingMidi, 0,
-    // bufferToFill.numSamples);
+    synthesiser.renderNextBlock(*bufferToFill.buffer, incomingMidi, 0, bufferToFill.numSamples);
 }
 
 juce::MidiMessageCollector* BASAudioProcessor::getMidiCollector()
@@ -331,19 +318,18 @@ bool BASAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* BASAudioProcessor::createEditor()
 {
-    return new BASAudioProcessorEditor (*this);
+    return new BASAudioProcessorEditor(*this);
 }
 
 //==============================================================================
-void BASAudioProcessor::getStateInformation (juce::MemoryBlock& /*destData*/)
+void BASAudioProcessor::getStateInformation(juce::MemoryBlock& /*destData*/)
 {
     // You should use this method to store your parameters in the memory block.
     // You could do that either as raw data, or use the XML or ValueTree classes
     // as intermediaries to make it easy to save and load complex data.
 }
 
-void BASAudioProcessor::setStateInformation (const void* /*data*/,
-                                             int /*sizeInBytes*/)
+void BASAudioProcessor::setStateInformation(const void* /*data*/, int /*sizeInBytes*/)
 {
     // You should use this method to restore your parameters from this memory
     // block, whose contents will have been created by the getStateInformation()

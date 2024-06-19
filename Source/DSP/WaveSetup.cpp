@@ -70,30 +70,22 @@ void Wavetable::setCustomADSRParameters(float att, float dec, float sus, float r
 // Get the next sample and update the phase
 float Wavetable::linearInterpolation()
 {
+	// Calculate the index below and above the read pointer
     int indexBelow = readPointer_;
+    
     int indexAbove = indexBelow + 1;
+    
     indexAbove %= wavetable_.size();
-
+    
     // Calculate the weights for the below and above samples
     float fractionAbove = readPointer_ - indexBelow;
-    float fractionBelow = 1.0f - fractionAbove;
+    
+    float fractionBelow = 1.0 - fractionAbove;
+    
+    // Calculate the weighted average of the below and above samples
+    return fractionBelow * wavetable_[indexBelow] + fractionAbove * wavetable_[indexAbove];
+}		
 
-    // Load the wavetable values for the below and above indices using NEON intrinsics
-    float32x2_t vBelow = vld1_f32 (&wavetable_[indexBelow]);
-    float32x2_t vAbove = vld1_f32 (&wavetable_[indexAbove]);
-
-    // Calculate the weighted average of the below and above samples using NEON intrinsics
-    float32x2_t vFractionBelow = vdup_n_f32 (fractionBelow);
-    float32x2_t vFractionAbove = vdup_n_f32 (fractionAbove);
-    float32x2_t vWeightedBelow = vmul_f32 (vBelow, vFractionBelow);
-    float32x2_t vWeightedAbove = vmul_f32 (vAbove, vFractionAbove);
-    float32x2_t vResult = vadd_f32 (vWeightedBelow, vWeightedAbove);
-
-    // Extract the result from the NEON register
-    float result;
-    vst1_f32 (&result, vResult);
-    return result;
-}
 
 float Wavetable::process()
 {
