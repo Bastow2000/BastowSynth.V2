@@ -1,7 +1,7 @@
 # BastowSynth.V2
 An update of BastowSynth.V1
 
-Work in Progress!
+Bastow Synth has been my entry point into coding, marking my first project. Through multiple iterations, I've learned much from this project, mainly graphical-based, and how to structure projects. I've decided to conclude work on this project and shift my focus to broadening my skills in other areas, rather than getting stuck in perfecting one project. 
 
 <img width="977" alt="Screenshot 2023-07-19 at 12 07 45" src="https://github.com/Bastow2000/BastowSynth.V2/assets/77554338/97e9dc0b-e579-40e7-877e-4b0d75e9fd6f">
 
