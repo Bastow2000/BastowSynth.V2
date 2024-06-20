@@ -186,9 +186,7 @@ double BASAudioProcessor::getTailLengthSeconds() const
 
 int BASAudioProcessor::getNumPrograms()
 {
-    return 1; // NB: some hosts don't cope very well if you tell them there are 0
-              // programs, so this should be at least 1, even if you're not really
-              // implementing programs.
+    return 1; 
 }
 
 int BASAudioProcessor::getCurrentProgram()
@@ -239,14 +237,11 @@ bool BASAudioProcessor::isBusesLayoutSupported(const BusesLayout& layouts) const
     juce::ignoreUnused(layouts);
     return true;
 #else
-    // This is the place where you check if the layout is supported.
-    // In this template code we only support mono or stereo.
-    // Some plugin hosts, such as certain GarageBand versions, will only
-    // load plugins that support stereo bus layouts.
+    
     if (layouts.getMainOutputChannelSet() != juce::AudioChannelSet::mono() && layouts.getMainOutputChannelSet() != juce::AudioChannelSet::stereo())
         return false;
 
-    // This checks if the input layout matches the output layout
+  
 #if !JucePlugin_IsSynth
     if (layouts.getMainOutputChannelSet() != layouts.getMainInputChannelSet())
         return false;
@@ -283,9 +278,7 @@ void BASAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce::Mid
             {
                 currentGain[n] = juce::Decibels::decibelsToGain(*tree.getRawParameterValue("gainId" + std::to_string(n)) + 0.0);
                 frequency[n] = static_cast<int>(*tree.getRawParameterValue("freqId" + std::to_string(n)));
-                waveType[n] = static_cast<int>(*tree.getRawParameterValue("waveTypeId" + std::to_string(n)));
 
-                voice->setWaveType(n, waveType[n]);
                 voice->setGain(n, currentGain[n]);
                 voice->setFrequency(n, frequency[n]);
             }
@@ -313,7 +306,7 @@ juce::MidiMessageCollector* BASAudioProcessor::getMidiCollector()
 //==============================================================================
 bool BASAudioProcessor::hasEditor() const
 {
-    return true; // (change this to false if you choose to not supply an editor)
+    return true; 
 }
 
 juce::AudioProcessorEditor* BASAudioProcessor::createEditor()
@@ -324,16 +317,11 @@ juce::AudioProcessorEditor* BASAudioProcessor::createEditor()
 //==============================================================================
 void BASAudioProcessor::getStateInformation(juce::MemoryBlock& /*destData*/)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
 }
 
 void BASAudioProcessor::setStateInformation(const void* /*data*/, int /*sizeInBytes*/)
 {
-    // You should use this method to restore your parameters from this memory
-    // block, whose contents will have been created by the getStateInformation()
-    // call.
+   
 }
 
 //==============================================================================
