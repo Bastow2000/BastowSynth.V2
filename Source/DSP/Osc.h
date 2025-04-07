@@ -30,12 +30,25 @@ public:
         amplitudeADSR.setSampleRate((float) getSampleRate());
     }
 
+    ~WavetableSynthesiserVoice() override
+    {
+        // Clean up resources
+        oscillators_.clear();
+        generation_.reset();
+    }
+
     void promptInitialWavetable()
     {
+        float totalGain = 0.0f;
         for (unsigned int n = 0; n < kNumOscillators_; ++n)
         {
-            gains_[n] = 1.0f / kNumOscillators_; // Initial gain value
+            gains_[n] = 1.0f / kNumOscillators_;
+            totalGain += gains_[n];
         }
+        // Optional: Normalize if needed
+        if (totalGain > 1.0f)
+            for (auto& gain : gains_)
+                gain /= totalGain;
     }
 
     void setMasterGain (float masterVol)
@@ -53,7 +66,7 @@ public:
     {
         if (index < kNumOscillators_)
         {
-            frequencyP_[index] = static_cast<int> (frequency) / 24;
+            frequencyP_[index] = (frequency) / 24;
         }
     }
 
@@ -66,15 +79,13 @@ public:
         return (float) hertz;
     }
 
-    void setWaveType (unsigned int index, int waveType)
+    void setWaveType(unsigned int index, int waveType)
     {
-        // this is very confusing, is waveType changing size?
-        if (4 < waveType_.size())
+        if (index < waveType_.size())
         {
             waveType_[index] = waveType;
             buttonPressed = true;
-            std::cout << "The value of number is: " << waveType << std::endl;
-            std::cout << "The vector of number is: " << waveType_[index] << std::endl;
+            CreateNewWaveTable(); // Regenerate wavetables
         }
     }
 
@@ -95,15 +106,23 @@ public:
     void startNote (int midiNoteNumber, float velocity, juce::SynthesiserSound*, int /*currentPitchWheelPosition*/) override
     {
         amplitudeADSR.trigger();
+        level_ = velocity;
+        const float fundamental = noteHz(midiNoteNumber, 0);
+        const float nyquist = getSampleRate() / 2.0f;
         float oscillatorFrequency;
         float oscGain;
 
         for (unsigned int n = 0; n < kNumOscillators_; ++n)
         {
             float frequencyOffset = ((n + 1) * frequencyP_[n]) * (n * frequencyIncrement_);
-            float harmonicFrequency = noteHz (midiNoteNumber, 0) * (n + 1); // calculate frequency for the current harmonic
+             const float harmonicFrequency = fundamental * (n + 1); // calculate frequency for the current harmonic
             frequencyN_[n] = harmonicFrequency + frequencyOffset;
             level_ = velocity;
+            if (harmonicFrequency >= nyquist)
+            {
+                gains_[n] = 0.0f;
+                continue;
+            }
             for (unsigned int s = 0; s < 4; ++s)
             {
                 oscillatorFrequency = frequencyN_[n];
@@ -116,10 +135,17 @@ public:
         }
     }
 
-    void stopNote (float /*velocity*/, bool /*allowTailOff*/) override
+    void stopNote (float /*velocity*/, bool allowTailOff) override
     {
-        amplitudeADSR.release();
-        clearCurrentNote();
+
+        if (allowTailOff)
+            amplitudeADSR.release();
+        else
+        {
+            amplitudeADSR.reset();
+            clearCurrentNote();
+        }
+
     }
 
     void pitchWheelMoved (int /*newValue*/) override {}
@@ -129,36 +155,40 @@ public:
     void setCustomADSRParameters(float att,float dec,float sus,float rel,float hold, float dec2)
     {
         amplitudeADSR.setAttackTime(att);
-        amplitudeADSR.setAttackHoldTime(hold);
-		amplitudeADSR.setDecayTime(dec);
-        amplitudeADSR.setSustainLevel(sus);
-		amplitudeADSR.setDecay2Time(dec2);
-        amplitudeADSR.setReleaseTime(rel);
+		amplitudeADSR.setDecayTime(hold);
+        amplitudeADSR.setSustainLevel(dec);
+
+        amplitudeADSR.setReleaseTime(sus);
+        amplitudeADSR.setDecay2Time(dec2);
+        amplitudeADSR.setDecay2Time(rel);
         amplitudeADSR.setSegment(dec2,rel, Release);
     }
 
     
     void renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override
     {
-        std::array<float,kNumOscillators_> envelopeValues;
+        bool envelopeComplete = true;
+
         for (int sample = 0; sample < numSamples; ++sample)
         {
+            const float env = amplitudeADSR.process();
+            envelopeComplete &= (env <= 0.0f);
+
             float value = 0.0f;
             for (unsigned int i = 0; i < oscillators_.size(); ++i)
             {
-                envelopeValues[i] = amplitudeADSR.process();
-                value += oscillators_[i]->process() * (gains_[i] )  * (envelopeValues[i] );
+                if (gains_[i] > 0.0f)
+                    value += oscillators_[i]->process() * gains_[i] * env;
             }
 
             value *= masterGain_;
 
-                for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
-                {
-            
-                    outputBuffer.addSample(channel, startSample + sample, value);
-                }
-            
+            for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
+                outputBuffer.addSample(channel, startSample + sample, value);
         }
+
+        if (envelopeComplete)
+            clearCurrentNote();
     }
 
     std::vector<int> waveType_;
@@ -178,14 +208,16 @@ private:
 
     void CreateNewWaveTable()
     {
-        sineTable_.clear();
-        sineTable_.resize (wavetableSize_);
-        generation_ = std::make_unique<GenerateWavetable> ((float) getSampleRate(), sineTable_, phase_);
+        oscillatorWavetables_.resize(kNumOscillators_);
         for (unsigned int n = 0; n < kNumOscillators_; ++n)
         {
-            sineTable_ = generation_->prompt_Harmonics (static_cast<unsigned int> (waveType_[n]));
+            std::vector<float> wavetable(wavetableSize_);
+            auto generation = std::make_unique<GenerateWavetable>(getSampleRate(), wavetable, phase_);
+            oscillatorWavetables_[n] = generation->prompt_Harmonics(static_cast<unsigned int>(waveType_[n]));
+            oscillators_[n]->setNewWavetable(oscillatorWavetables_[n]);
         }
     }
+
     void CreateOscillator()
     {
         CreateWaveTable();
@@ -193,7 +225,7 @@ private:
         oscillators_.resize (kNumOscillators_);
         for (unsigned int n = 0; n < kNumOscillators_; ++n)
         {
-            oscillators_[n] = std::make_unique<Wavetable> ((float) getSampleRate(), sineTable_, phase_);
+            oscillators_[n] = std::make_unique<Wavetable> (static_cast<float> (getSampleRate()), sineTable_, phase_);
         }
     }
 
@@ -210,6 +242,7 @@ private:
         }
        
     }
+    std::vector<std::vector<float>> oscillatorWavetables_;
     static constexpr unsigned int kNumOscillators_ = 33;
     size_t wavetableSize_;
     float level_ = 0.0f;

@@ -9,7 +9,7 @@
 #pragma once
 
 #include "BASPluginProcessor.h"
-#include "Component_Placement.h"
+
 #include "M_Component1.h"
 #include "V_Component1.h"
 #include "V_Component2.h"
@@ -40,8 +40,6 @@ public:
     juce::Image background;
 
     // Creates a draggable component used for finding the size values faster
-    MyDraggableComponent vComponent;
-    MyResizableBorderComponent resizableBorderComponent;
 
     // Sets Components for different Volume Sliders (1)1-10,(2)11-21,(3)22-32
     ADSRCompartment ADSRComponent;

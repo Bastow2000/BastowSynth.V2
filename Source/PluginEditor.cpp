@@ -13,7 +13,6 @@ BASAudioProcessorEditor::BASAudioProcessorEditor (BASAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p),
 
       // Initalises components with the audio processor
-      resizableBorderComponent (&vComponent, nullptr),
       vComponent1 (audioProcessor),
       vComponent2 (audioProcessor),
       vComponent3 (audioProcessor),
@@ -49,7 +48,6 @@ BASAudioProcessorEditor::BASAudioProcessorEditor (BASAudioProcessor& p)
     // editor's size to whatever you need it to be.
     setSize (929, 571);
 
-    addMouseListener (&resizableBorderComponent, true);
     addAndMakeVisible (&vComponent1);
     addAndMakeVisible (&vComponent2);
     addAndMakeVisible (&vComponent3);
@@ -59,7 +57,7 @@ BASAudioProcessorEditor::BASAudioProcessorEditor (BASAudioProcessor& p)
     addAndMakeVisible (&mvComponent1);
     addAndMakeVisible (&keyboardComponent);
     addAndMakeVisible (ADSRComponent);
-    addAndMakeVisible (vComponent);
+
 
    /* for (int i = 0; i < adsrCompartments.size(); ++i)
     {

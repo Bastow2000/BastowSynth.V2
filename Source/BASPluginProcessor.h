@@ -63,7 +63,7 @@ public:
     void initialiseSynth();
     void setWaveType(unsigned int index, int waveType);
    
-    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+    static juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     juce::AudioProcessorValueTreeState tree;
     juce::MidiMessageCollector* getMidiCollector();
     juce::MidiKeyboardState keyboardState;
@@ -79,8 +79,6 @@ private:
     bool isAddingFromMidiInput;
     
     juce::Synthesiser synthesiser;
-    WavetableSynthesiserVoice* voice;
-    WavetableSynthesiserVoice* activeVoice = nullptr;
     juce::LinearSmoothedValue<float> smooth { 0.0f};
     int selectedOscillatorIndex = 1; // Calculating start index
 

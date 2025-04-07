@@ -56,7 +56,7 @@ private:
     std::vector<std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment>> waveTypeAttachments_;
     const std::vector<int> button_y_ { 90, 115, 144, 171, 201, 230, 258, 286, 314, 339, 363 };
 
-    WavetableSynthesiserVoice* voice_;
+  std::unique_ptr<WavetableSynthesiserVoice>  voice_;
 
     //-------------------------------------------------------------------------------
     //juce::Colour colour_scheme_[11] = { C1::grey, C1::red, C1::orange, C1::yellow, C1::brightGreen, C1::limeGreen, C1::brightBlue, C1::blue, C1::violet, C1::magenta, C1::cosmic };

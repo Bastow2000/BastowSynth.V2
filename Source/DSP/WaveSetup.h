@@ -13,10 +13,13 @@ public:
     Wavetable() {}
 
     // Default Destructor
-    ~Wavetable() { wavetable_.clear(); }
+    ~Wavetable() {wavetable_.clear();};
 
     // Additional Constructor with arguments
     Wavetable (float sampleRate, std::vector<float>& wavetable, float phase);
+
+    void setSampleRate (float newSampleRate);
+    void updatePhaseIncrement();
 
     // Sets up important variables used in the classes functions
     void setup (float sampleRate, std::vector<float>& wavetable, float phase);
@@ -28,22 +31,24 @@ public:
     void setCustomADSRParameters(float att, float dec, float sus, float rel, float hold, float dec2);
 
     // Sets new Wavetable
-    inline void setNewWavetable (const std::vector<float>& newWavetable);
+  void setNewWavetable (std::vector<float> newWavetable);
 
     // Sets the Amplitude for the <Wavetable*> thats called
     void setAmplitude (float a);
 
     // Gets the frequency for the <Wavetable*> thats called
-    inline float getFrequency();
+    inline float getFrequency() const;
 
     // Gets the amplitude for the <Wavetable*> thats called
-    inline float getAmplitude();
+   inline float getAmplitude() const;
 
     // Takes wavetable from the Constructor reads through the buffer
     float process();
 
     // Takes wavetable from the Constructor and applies linearInterpolation
-    inline float linearInterpolation();
+    inline float linearInterpolation() const;
+
+    float cubicInterpolation();
 
 private:
     // Buffer holding the wavetable
@@ -51,6 +56,8 @@ private:
 
     // 1 divided by the audio sample rate
     float inverseSampleRate_;
+
+    float sampleRate_;
 
     float frequency_;
 

@@ -6,7 +6,7 @@ ThirdVCompartment::ThirdVCompartment (BASAudioProcessor& p) : frequencySliders (
                                                               waveTypeB (numButtons),
                                                               voice_ (std::make_unique<WavetableSynthesiserVoice>().release()),
                                                               audioProcessor_ (p),
-                                                              resizableBorderComponent_ (&vComponent_, nullptr),
+
                                                               sliderArray_ (numSliders),
                                                               frequencyAttachments_ (numSliders),
                                                               buttonArray_ (numButtons),
@@ -17,9 +17,6 @@ ThirdVCompartment::ThirdVCompartment (BASAudioProcessor& p) : frequencySliders (
     {
         sliderArray_[i] = &frequencySliders[i];
     }
-
-    // addMouseListener(&resizableBorderComponent, true);
-    addAndMakeVisible (vComponent_);
 
     const auto getFreqSliderColour = [&] (int index)
     {

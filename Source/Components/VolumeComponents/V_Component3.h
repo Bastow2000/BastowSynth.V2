@@ -1,7 +1,7 @@
 #pragma once
 #include "../../Source/BASPluginProcessor.h"
 #include "../ParamId.h"
-#include "Component_Placement.h"
+
 #include "CustomButton.h"
 #include "FreqAProp.h"
 #include "FreqSLAF.h"
@@ -43,11 +43,9 @@ private:
 
     BASAudioProcessor& audioProcessor_;
     juce::Image background_;
-    MyDraggableComponent vComponent_;
-    MyResizableBorderComponent resizableBorderComponent_;
-    // ParameterNames parameterNames_;
 
-    WavetableSynthesiserVoice* voice_;
+
+    std::unique_ptr<WavetableSynthesiserVoice> voice_;
 
     //-------------------------------------------------------------------------------
     std::vector<BastowFreqSlider*> sliderArray_;
