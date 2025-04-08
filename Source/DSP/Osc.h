@@ -170,21 +170,53 @@ public:
     void renderNextBlock (juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override
     {
         bool envelopeComplete = true;
-
+        static float feedbackBuffer[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+        static float feedbackBuffer2[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+        static float feedbackBuffer3[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+        static float feedbackBuffer4[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+        static float feedbackAmount = 0.0f;
         for (int sample = 0; sample < numSamples; ++sample)
         {
             const float env = amplitudeADSR.process();
             envelopeComplete &= (env <= 0.0f);
+            float feedbackValue = (feedbackBuffer[0] * feedbackBuffer[2]) +
+                             (feedbackBuffer[1] * feedbackBuffer[3]);
+            float feedbackValue2 = (feedbackBuffer2[0] + feedbackBuffer2[2]) *
+                             (feedbackBuffer2[1] + feedbackBuffer2[3]);
+            float feedbackValue3 = (feedbackBuffer3[0] - feedbackBuffer3[2]) *
+                             (feedbackBuffer3[1] - feedbackBuffer3[3]);
+            float feedbackValue4 = (feedbackBuffer4[0] * feedbackBuffer4[2]) -
+                             (feedbackBuffer4[1] * feedbackBuffer4[3]);
 
             float value = 0.0f;
             for (unsigned int i = 0; i < oscillators_.size(); ++i)
             {
                 if (targetGains_[i] > 0.0f)
                     gains_[i] += (targetGains_[i] - gains_[i]) * smoothingCoeff;
-
                 value += oscillators_[i]->process() * gains_[i] * env;
             }
+            feedbackBuffer[3] = feedbackBuffer[0];
+            feedbackBuffer[2] = feedbackBuffer[1];
+            feedbackBuffer[1] = feedbackBuffer[2];
+            feedbackBuffer[0] = value;
 
+            feedbackBuffer2[3] = feedbackBuffer2[2];
+            feedbackBuffer2[2] = feedbackBuffer2[1];
+            feedbackBuffer2[1] = feedbackBuffer2[0];
+            feedbackBuffer2[0] = value;
+
+            feedbackBuffer3[3] = feedbackBuffer3[2];
+            feedbackBuffer3[2] = feedbackBuffer3[0];
+            feedbackBuffer3[1] = feedbackBuffer3[1];
+            feedbackBuffer3[0] = value;
+
+            feedbackBuffer4[3] = feedbackBuffer4[0];
+            feedbackBuffer4[2] = feedbackBuffer4[2];
+            feedbackBuffer4[1] = feedbackBuffer4[1];
+            feedbackBuffer4[0] = value;
+
+
+            value += std::tanf(feedbackValue + feedbackValue2 - feedbackValue3+feedbackValue4) * feedbackAmount; // Add a parameter to control feedback amount
             value *= masterGain_;
 
             for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
