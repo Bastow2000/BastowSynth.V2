@@ -76,7 +76,7 @@ BASAudioProcessor::createParameterLayout()
             gainId, gainName, juce::NormalisableRange<float>(-64.0f, -12.0f, 1.0), -64.0f);
 
         auto freqParameter = std::make_unique<juce::AudioParameterFloat>(
-            freqId, freqName, juce::NormalisableRange<float>(0.0f, 3.0f, 0.1), 2.5f);
+            freqId, freqName, juce::NormalisableRange<float>(0.0f, 4.0f, 0.1), 2.5f);
 
         auto waveTypeParameter = std::make_unique<juce::AudioParameterBool>(
             wavetypeId, wavetypeName, false);
