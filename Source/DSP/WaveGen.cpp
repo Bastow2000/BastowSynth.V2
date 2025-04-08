@@ -37,51 +37,59 @@ float GenerateWavetable::poly_blep(float t, float dt)
     return 0.0f;
 }
 
-float GenerateWavetable::prompt_WaveType(unsigned int waveNumber, float n) {
-    float t = static_cast<float>(n) / static_cast<float>(wavetable_.size());
-    float value = 0.0f;
+float GenerateWavetable::prompt_WaveType(float waveNumber, float n) {
     float dt = phaseIncrement_ / static_cast<float>(wavetable_.size());
+    float tableSize = static_cast<float>(wavetable_.size());
+    float normalizedPosition = n / tableSize; // Full cycle phase [0, 1)
 
-    switch (waveNumber) {
-        case 1: // Sine
-            value = sinf(2.0f * M_PI * t);
-        break;
-        case 2: // Triangle
-            value = 2.0f * (0.5f - fabs(2.0f * t - 1.0f)) - 0.5f;
-        break;
-        case 3: // Square (using polyBLEP)
-            value = (t < 0.5f) ? 1.0f : -1.0f;
-        value += poly_blep(t, dt);
-        value -= poly_blep(fmod(t + 0.5f, 1.0f), dt);
-        break;
-        case 4: // Sawtooth (using polyBLEP)
-            value = 2.0f * t - 1.0f;
-        value -= poly_blep(t, dt);
-        break;
+    std::vector<float> waveValues(4, 0.0f);
+
+    // Sine wave (waveValues[0])
+    waveValues[0] = sinf(2.0f * M_PI * normalizedPosition);
+
+    // Triangle wave (waveValues[1])
+    waveValues[1] = 2.0f * (0.5f - fabs(2.0f * normalizedPosition - 1.0f)) - 0.5f;
+
+    // Square wave with polyBLEP (waveValues[2])
+    waveValues[2] = (normalizedPosition < 0.5f) ? 1.0f : -1.0f;
+    waveValues[2] += poly_blep(normalizedPosition, dt);
+    waveValues[2] -= poly_blep(fmod(normalizedPosition + 0.5f, 1.0f), dt);
+
+    // Sawtooth wave with polyBLEP (waveValues[3])
+    waveValues[3] = 2.0f * normalizedPosition - 1.0f;
+    waveValues[3] -= poly_blep(normalizedPosition, dt);
+
+    // Clamp waveNumber to [0.0, 3.0] to stay within the 4 waveforms
+    waveNumber = std::clamp(waveNumber, 0.0f, 3.0f);
+    int waveIndex = static_cast<int>(waveNumber);
+    float blend = waveNumber - waveIndex;
+
+    // Edge case for the last waveform (sawtooth)
+    if (waveIndex >= 3) {
+        return waveValues[3];
     }
-    return value;
+
+    // Linear interpolation between adjacent waveforms
+    return (1.0f - blend) * waveValues[waveIndex] + blend * waveValues[waveIndex + 1];
 }
 
-// Uses the wavetable_ defined from the constuctor to assign a wave type to wavetable_ then adds the
-// wavetable_ to <Wavetable*> and sends the <Wavetable*> back to render to be used
-std::vector<std::unique_ptr<Wavetable>> GenerateWavetable::prompt_Modulator (std::vector<std::unique_ptr<Wavetable>> gOscillators, unsigned int waveNumber)
-{
-    for (unsigned int n = 0; n < wavetable_.size(); n++)
-    {
-        wavetable_[n] = prompt_WaveType (waveNumber, n);
-    }
-    auto oscillator = std::make_unique<Wavetable>(sampleRate_, wavetable_, phase_);
-    gOscillators.push_back(std::move(oscillator));
-
-    return gOscillators;
-}
-
-// Uses the wavetable_ defined from the constuctor to assign a wave type to wavetable_ then returns value
-std::vector<float> GenerateWavetable::prompt_Harmonics (unsigned int waveNumber)
-{
-    for (unsigned int n = 0; n < wavetable_.size(); n++)
-    {
-        wavetable_[n] = prompt_WaveType (waveNumber, n);
+// Updated to accept float waveNumber for interpolation
+std::vector<float> GenerateWavetable::prompt_Harmonics(float waveNumber) {
+    for (unsigned int n = 0; n < wavetable_.size(); n++) {
+        wavetable_[n] = prompt_WaveType(waveNumber, static_cast<float>(n));
     }
     return wavetable_;
 }
+// Uses the wavetable_ defined from the constuctor to assign a wave type to wavetable_ then adds the
+// wavetable_ to <Wavetable*> and sends the <Wavetable*> back to render to be used
+std::vector<std::unique_ptr<Wavetable>> GenerateWavetable::prompt_Modulator(
+    std::vector<std::unique_ptr<Wavetable>> gOscillators, float waveNumber)
+{
+    for (unsigned int n = 0; n < wavetable_.size(); n++) {
+        wavetable_[n] = prompt_WaveType(waveNumber, static_cast<float>(n));
+    }
+    auto oscillator = std::make_unique<Wavetable>(sampleRate_, wavetable_, phase_);
+    gOscillators.push_back(std::move(oscillator));
+    return gOscillators;
+}
+

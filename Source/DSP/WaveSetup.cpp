@@ -26,7 +26,7 @@ void Wavetable::setup (float sampleRate, std::vector<float>& wavetable, float ph
     readPointer_ = 0;
 }
 
-void Wavetable::setNewWavetable(std::vector<float> newWavetable) { // ✅ Copy/move
+void Wavetable::setNewWavetable(std::vector<float>& newWavetable) {
     wavetable_ = std::move(newWavetable); // Efficient transfer
 }
 

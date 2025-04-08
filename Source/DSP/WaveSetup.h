@@ -31,7 +31,7 @@ public:
     void setCustomADSRParameters(float att, float dec, float sus, float rel, float hold, float dec2);
 
     // Sets new Wavetable
-  void setNewWavetable (std::vector<float> newWavetable);
+  void setNewWavetable (std::vector<float>& newWavetable);
 
     // Sets the Amplitude for the <Wavetable*> thats called
     void setAmplitude (float a);
@@ -49,11 +49,13 @@ public:
     inline float linearInterpolation() const;
 
     float cubicInterpolation();
+  void setNewWavetable(std::vector<float>&& newTable, float sampleRate);
 
 private:
     // Buffer holding the wavetable
     std::vector<float> wavetable_;
 
+  juce::SpinLock spinLock_;
     // 1 divided by the audio sample rate
     float inverseSampleRate_;
 
